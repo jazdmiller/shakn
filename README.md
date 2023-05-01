@@ -52,7 +52,7 @@ Shakn is  a responsive web app built with React that helps users find cocktail r
 
 ## Component Hierarchy
 
-App
+    App
 |
 |-- Header
 |   |-- Logo
