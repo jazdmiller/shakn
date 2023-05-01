@@ -48,3 +48,50 @@ Shakn is  a responsive web app built with React that helps users find cocktail r
 
 8. Exploere additional information:
   - Users can learn more about the website through the 'About Us' and 'Contact Us' pages
+
+
+## Component Hierarchy
+
+App
+|
+|-- Header
+|   |-- Logo
+|   |-- NavigationMenu
+|   |   |-- MenuItem
+|   |-- SearchBar
+|   |-- AuthButtons (SignUp, Login)
+|
+|-- Main (Pages managed by React Router)
+|   |-- LandingPage
+|   |   |-- FeaturedCocktails
+|   |
+|   |-- BrowseCocktailsPage
+|   |   |-- FilterOptions
+|   |   |-- CocktailList
+|   |       |-- CocktailCard
+|   |       |-- Pagination
+|   |
+|   |-- CocktailRecipeDetailPage
+|   |   |-- CocktailDetails
+|   |   |-- IngredientsList
+|   |   |-- PreparationInstructions
+|   |   |-- SaveToFavoritesButton
+|   |   |-- SocialSharingButtons
+|   |
+|   |-- SignUpPage
+|   |   |-- SignUpForm
+|   |
+|   |-- LoginPage
+|   |   |-- LoginForm
+|   |
+|   |-- UserProfilePage
+|   |   |-- UserProfileInfo
+|   |   |-- FavoritesList
+|   |       |-- CocktailCard
+|   |
+|   |-- AboutUsPage
+|   |-- ContactUsPage
+|
+|-- Footer
+    |-- FooterLinks
+    |-- NewsletterSubscription
