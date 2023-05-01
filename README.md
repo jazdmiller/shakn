@@ -5,7 +5,7 @@ Discover, Save, and Share Your Favorite Cocktails
 ## Description 
 Shakn is  a responsive web app built with React that helps users find cocktail recipes based on their preferences. <br>
 
-Key Features:
+**Key Features:**
 
 - Search for cocktail recipes by name or ingredients
 - Filter and browse cocktails based on various criteria (alcoholic/non-alcoholic, ingredients, glass type, cocktail type)
