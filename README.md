@@ -1,97 +1,70 @@
-# Shakn
-Discover, Save, and Share Your Favorite Cocktails
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Description 
-Shakn is  a responsive web app built with React that helps users find cocktail recipes based on their preferences. <br>
+## Available Scripts
 
-**Key Features:**
+In the project directory, you can run:
 
-- Search for cocktail recipes by name or ingredients
-- Filter and browse cocktails based on various criteria (alcoholic/non-alcoholic, ingredients, glass type, cocktail type)
-- View detailed information about each cocktail recipe, including ingredients, preparation instructions, glass type, and garnish
-- Save and manage favorite recipes with user authentication
-- Responsive design for seamless user experience across devices
-- Integrated with TheCocktailDB API for a comprehensive cocktail database
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## User Flow
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1. Landing Page:
-  - Users arrive on the landing page, which presents the website's logo, tagline, and featured cocktails
-  - The main focus is the search bar, encouraging users to search for cocktail recipes
-  - Call-to-action buttons prompt users to sign up or log in
+### `npm test`
 
-2. Search for cocktial recipes:
-  - Users can search for recipes using the search bar by entering cocktail names or ingredients
-  - Alternatively, users can navigate to the 'Browse Cocktails' page using the navigation menu
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-3. Browse Cocktails Page:
-  - Users can filter cocktail recipes based on preferences (e.g., alcoholic/non-alcoholic, ingredients, glass type, cocktail type)
-  - Users can browse the cocktail cards displayed in a grid format, with pagination or infinite scroll for easy navigation
+### `npm run build`
 
-4. Cocktail Recipe Detail Page:
-  - Users can click on a cocktail card to view more details, including ingredients, preparation instructions, glass type, and garnish
-  - Users can also view the recipe's rating and user reviews
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-5. Save favorite recipes:
-  - Users can create an account or log in to save their favorite cocktail recipes
-  - The 'Save to Favorites' button on the Cocktail Recipe Detail Page allows users to add recipes to their personal list
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-6. Sign Up or Log In:
-  - Users can sign up for a new account or log in to an existing account using email/password or social media accounts
-  - Upon successful authentication, users are redirected to their profile page
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-7. User Profile Page:
-  - Users can view and manage their saved favorite cocktail recipes
-  - Users can edit their profile information or change their password
+### `npm run eject`
 
-8. Exploere additional information:
-  - Users can learn more about the website through the 'About Us' and 'Contact Us' pages
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Component Hierarchy
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-        App
-        |
-        |-- Header
-        |   |-- Logo
-        |   |-- NavigationMenu
-        |   |   |-- MenuItem
-        |   |-- SearchBar
-        |   |-- AuthButtons (SignUp, Login)
-        |
-        |-- Main (Pages managed by React Router)
-        |   |-- LandingPage
-        |   |   |-- FeaturedCocktails
-        |   |
-        |   |-- BrowseCocktailsPage
-        |   |   |-- FilterOptions
-        |   |   |-- CocktailList
-        |   |       |-- CocktailCard
-        |   |       |-- Pagination
-        |   |
-        |   |-- CocktailRecipeDetailPage
-        |   |   |-- CocktailDetails
-        |   |   |-- IngredientsList
-        |   |   |-- PreparationInstructions
-        |   |   |-- SaveToFavoritesButton
-        |   |   |-- SocialSharingButtons
-        |   |
-        |   |-- SignUpPage
-        |   |   |-- SignUpForm
-        |   |
-        |   |-- LoginPage
-        |   |   |-- LoginForm
-        |   |
-        |   |-- UserProfilePage
-        |   |   |-- UserProfileInfo
-        |   |   |-- FavoritesList
-        |   |       |-- CocktailCard
-        |   |
-        |   |-- AboutUsPage
-        |   |-- ContactUsPage
-        |
-        |-- Footer
-            |-- FooterLinks
-            |-- NewsletterSubscription
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
