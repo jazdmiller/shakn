@@ -37,13 +37,12 @@
   }
 } */
 
-/* .test{
+.test{
   border: 2px red solid;
 }
 .test-col{
   border: 2px blue solid;
-  height: 100%;
-} */
+}
 /* *** NAVBAR *********************************************************** */
 
 .nav-background{
@@ -109,6 +108,10 @@
 .hero-img{
   max-height: 90%;
   max-width: 90%;
+}
+
+.hero-text-row{
+  height: inherit;
 }
 
 /* ***************** HOME BROWSE *************************** */
