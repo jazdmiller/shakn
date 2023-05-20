@@ -37,12 +37,12 @@
   }
 } */
 
-.test{
+/* .test{
   border: 2px red solid;
 }
 .test-col{
   border: 2px blue solid;
-}
+} */
 /* *** NAVBAR *********************************************************** */
 
 .nav-background{
@@ -110,10 +110,72 @@
   max-width: 90%;
 }
 
-.hero-text-row{
-  height: inherit;
+@media (min-width: 390px){
+  .hero-text-col{
+    padding-bottom: 20% !important;
+  }
+
+  .hero-text{
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+
+  .hero-img-col{
+    text-align: center;
+  }
+
+  .home-col input{
+    padding-left: 7%;
+  }
 }
 
+@media (min-width: 500px){
+  .hero-text-col{
+    /* padding: 2% !important; */
+  }
+
+  .hero-text{
+    text-align: center;
+    justify-content: center;
+    font-size: 1.9em;
+  }
+
+  .hero-img{
+    max-height: 85%;
+    max-width: 85%;
+    text-align: center;
+    justify-content: center ;
+  }
+}
+
+@media (min-width: 768px){
+  .home-col{
+    padding-top: 3%;
+  }
+
+  .hero-text{
+    text-align: left;
+    justify-content: left;
+    font-size: 2.9em;
+    width: 75%;
+  }
+
+  .hero-text-col{
+    padding: 7%;
+    padding-left: 10%;
+  }
+
+  .hero-img{
+    max-height: 90%;
+    max-width: 90%;
+  }
+
+  .hero-img-col{
+    text-align: right;
+    padding-right: 3%;
+  }
+}
 /* ***************** HOME BROWSE *************************** */
 
 .home-label-text{

@@ -8,9 +8,9 @@ export default function Home() {
     <div>
         {/* ***** HERO CONTAINER ****** */}
         <div className='container-fluid home-container' >
-            <div className='row hero-text-row test home-col'>
-                <div className='order-last order-md-first col-sm-12 col-md-6 p-5 text-left test-col'>
-                    <div className='pt-4 row w-100 hero-text'>
+            <div className='row test home-col'>
+                <div className='order-last order-md-first hero-text-col col-sm-12 col-md-6 test-col'>
+                    <div className='row hero-text'>
                        
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology Adventure Awaits
                     </div>
@@ -18,7 +18,7 @@ export default function Home() {
                         <input type="text" placeholder="Search cocktail recipes"></input>
                     </div>
                 </div>
-                <div className='order-md-last text-center order-first col-sm-12 col-md-6 test-col'>
+                <div className='order-md-last hero-img-col order-first col-sm-12 col-md-6 test-col'>
                     <img src={HeroImg} alt='drink graphic' className='pt-5 hero-img'/>
                 </div>
             </div>
