@@ -22,7 +22,7 @@ function BrowseHome() {
         </div>
         <div className="row mx-2 mt-2">
           {categories.map((category) => (
-            <div className="col-6 col-md-4 col-lg-3 ">
+            <div className=" my-2 col-6 col-md-4 col-lg-3 ">
             <CategoryLabel key={category} category={category}/>
             </div>
           ))}
