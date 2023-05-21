@@ -12,7 +12,7 @@ export default function Home() {
                 <div className='order-last order-md-first hero-text-col col-sm-12 col-md-6 test-col'>
                     <div className='row hero-text'>
                        
-                            Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology Adventure Awaits
+                            Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
                     </div>
                     <div className='row pt-5'>
                         <input type="text" placeholder="Search cocktail recipes"></input>
