@@ -192,5 +192,16 @@
 .cat-btn{
   padding: 10%;
   width: 100%;
+  border-radius: 20px;
+  background-color: #EA4E45;
+  border: 1px solid #EA4E45;
+  color: white;
+  font-family: 'Calistoga', serif;
+  font-size: 1.1em;
 }
 
+.cat-btn:hover{
+  background-color: white;
+  color: #EA4E45;
+  border-color: #EA4E45;
+}
