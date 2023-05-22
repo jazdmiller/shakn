@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroImg from '../assets/hero-img.png'
 import BrowseHome from '../components/BrowseHome'
+import Featured from '../components/Featured'
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
         <div className='container-fluid home-container' >
             <div className='row test home-col'>
                 <div className='order-last order-md-first hero-text-col col-sm-12 col-md-6 test-col'>
-                    <div className='row hero-text'>
+                    <div className='row hero-text mt-3'>
                        
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
                     </div>
@@ -26,6 +27,8 @@ export default function Home() {
 
         {/* ******  BROWSE SECTION **********/}
         <BrowseHome />
+        <Featured />
+        
 
     </div>
   )
