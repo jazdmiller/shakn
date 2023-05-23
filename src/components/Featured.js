@@ -4,7 +4,7 @@ import RecipeCard from "./RecipeCard";
 function Featured() {
   return (
     <div>
-      <div className="pt-5 container">
+      <div className=" feature-padding container">
         <div className="row mx-2">
           <div className="col home-label-text">Featured</div>
         </div>

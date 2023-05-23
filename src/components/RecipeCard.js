@@ -6,7 +6,7 @@ import Drink3 from '../assets/drink-img-3.jpg'
 function RecipeCard() {
   return (
     <div>
-      <div className="container">
+      <div className=" pt-2 container">
         <div className="row justify-content-center justify-content-md-between">
           <div className="col-10 col-md-6 col-lg-4">
         <div class="card">

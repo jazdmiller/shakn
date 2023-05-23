@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroImg from '../assets/hero-img.png'
 import BrowseHome from '../components/BrowseHome'
+import FavoritesHome from '../components/FavoritesHome'
 import Featured from '../components/Featured'
 
 
@@ -28,6 +29,7 @@ export default function Home() {
         {/* ******  BROWSE SECTION **********/}
         <BrowseHome />
         <Featured />
+        <FavoritesHome />
         
 
     </div>

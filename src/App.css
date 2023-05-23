@@ -206,6 +206,8 @@
   border-color: #EA4E45;
 }
 
+/* ***************** HOME FEATURE SECTON *************************** */
+
 .card{
   width: 100%;
   margin-top: 5%;
@@ -226,6 +228,10 @@
     height: 40vw;
     object-fit: cover;
   }
+
+  .feature-padding{
+    margin-top: 20%;
+  }
 }
 
 @media (min-width: 500px){
@@ -242,4 +248,15 @@
     height: 20vw;
     object-fit: cover;
   }
+  .feature-padding{
+    margin-top: 10%;
+  }
+}
+
+/* ***************** HOME FEATURE SECTON *************************** */
+
+.card-img{
+  width: 100%;
+    height: 50vw;
+    object-fit: cover;
 }

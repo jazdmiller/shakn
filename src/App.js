@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Search from './pages/Search'
 import Browse from './pages/Browse'
 import About from './pages/About'
-
+import RecipeDetail from './pages/RecipeDetail'
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       <Route path="/search" element={<Search />} />
       <Route path="/browse" element={<Browse/>} />
       <Route path="/about" element={<About />} />
+      <Route path="/recipe" element={<RecipeDetail />} />
       </Routes>
     </Router>
   );
