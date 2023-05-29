@@ -239,6 +239,10 @@
     object-fit: cover;
     border-radius: 20px;
   }
+
+  .details-row{
+    margin-top: 20% !important;
+  }
 }
 
 @media (min-width: 500px){
@@ -247,11 +251,15 @@
     height: 35vw;
     object-fit: cover;
   }
-
+  
   .recipe-card{
     height: 80vw;
     width: 100%;
     object-fit: cover;
+  }
+
+  .details-row{
+    margin-top: 20% !important;
   }
 }
 
@@ -264,12 +272,35 @@
   .feature-padding{
     margin-top: 10%;
   }
-
+  
   .recipe-card{
-    height: 30vw;
-    width: 100%;
+    height: 21vw;
+    width: 80%;
     object-fit: cover;
   }
+  .recipe-save-btn{
+    font-family: "Inter", sans-serif;
+    font-size: 1.2em;
+    margin-top: 20% !important;
+  }
+
+  .recipe-save-btn button{
+    text-transform: uppercase;
+    border: none;
+    background-color: #EA4E45;
+    color: white;
+    border-radius: 25px;
+    padding: 2%;
+  }
+
+  .details-row{
+    margin-top: 8% !important;
+  }
+
+  .recipe-container{
+    max-width: 1000px !important;
+  }
+
 }
 
 /* ***************** HOME FEATURE SECTON *************************** */
@@ -282,3 +313,64 @@
 
 /* ***************** RECIPE DETAIL PAGE *************************** */
 
+.dropdown-wrapper{
+  position: relative;
+}
+
+.dropdown{
+  position: absolute;
+  transition: height 0.5s ease;
+}
+
+li{
+  list-style-position: inside;
+}
+
+.recipe-title{
+  font-family: 'Calistoga', serif;
+  font-size: 2em;
+}
+
+.recipe-back{
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.recipe-back a:active{
+  color: black;
+  text-decoration: none;
+
+}
+
+.recipe-back a:visited{
+  color: black;
+  text-decoration: none;
+
+}
+
+.recipe-back a:link{
+  color: black;
+  text-decoration: none;
+
+}
+
+.ing-badge{
+  font-family: 'Inter', sans-serif;
+  font-size: 1em !important;
+  text-transform: lowercase;
+}
+
+.dd-label{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+/* ***************** ABOUT PAGE *************************** */
+
+
+.about-container{
+  background-color: #FFE2CA;
+  height: 95vh;
+}
