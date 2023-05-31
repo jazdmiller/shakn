@@ -243,6 +243,22 @@
   .details-row{
     margin-top: 20% !important;
   }
+
+  .about-title{
+    font-family: 'Calistoga', serif;
+    color: #EA4E45;
+    font-size: 2em;
+  }
+
+  .about-text{
+    font-family: 'Inter', sans-serif;
+    color: #EA4E45;
+    font-size: 1.1em;
+  }
+
+  .about-row{
+    text-align: center;
+  }
 }
 
 @media (min-width: 500px){
@@ -261,6 +277,11 @@
   .details-row{
     margin-top: 20% !important;
   }
+
+  .about-container{
+    height: 100%;
+  }
+
 }
 
 @media (min-width: 768px){
@@ -299,6 +320,15 @@
 
   .recipe-container{
     max-width: 1000px !important;
+  }
+
+  .about-container{
+    height: 100vh;
+  }
+
+  .about-title{
+    margin-top: 15% !important;
+    font-size: 2.5em;
   }
 
 }
@@ -372,5 +402,9 @@ li{
 
 .about-container{
   background-color: #FFE2CA;
-  height: 95vh;
+}
+
+.about-img img{
+  max-height: 90%;
+  max-width: 90%;
 }
