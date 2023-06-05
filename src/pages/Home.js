@@ -13,11 +13,15 @@ export default function Home() {
         setSearchInput(e.target.value)
     }
 
+    const handleSearchSubmit = async (e) => {
+        e.preventDefault();
+        searchCocktails();
+    }
+
     const searchCocktails = async () => {
         try {
             const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`)
             setSearchResults(res.data.drinks)
-            console.log(res)
             
         }
         catch (error) {
@@ -42,7 +46,9 @@ export default function Home() {
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
                     </div>
                     <div className='row pt-5'>
+                        <form onSubmit={handleSearchSubmit}>
                         <input type="text" placeholder="Search cocktail recipes" value={searchInput} onChange={handleSearchChange}></input>
+                        </form>
                     </div>
                 </div>
                 <div className='order-md-last hero-img-col order-first col-sm-12 col-md-6 test-col'>
@@ -51,6 +57,14 @@ export default function Home() {
             </div>
         </div>
 
+        <div>
+                    {searchResults && searchResults.map((drink, index) => (
+                       drink &&  <div key={drink.idDrink || index}>
+                            <h2>{drink.strDrink}</h2>
+                            <img src={drink.strDrinkThumb} alt={drink.strDrink}/>
+                        </div>
+                    ))}
+                </div>
         {/* ******  BROWSE SECTION **********/}
         <BrowseHome />
         <Featured />
