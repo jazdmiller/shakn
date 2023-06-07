@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Drink1 from "../assets/drink-img-1.jpg";
 
 function RecipeDetail() {
 
+  const [cocktail, setCocktail] = useState(null)
   const [showIngredientDropdown, setShowIngredientDropdown] = useState(false);
   const [showInstructionsDropdown, setShowInstructionsDropdown] = useState(false);
+  const { id } = useParams()
+
+  const fetchCocktail = async () => {
+    try{
+      const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+      setCocktail(response.data.drinks[0])
+    } catch(error){
+      console.error(`Error fetching cocktail details: ${error}`)
+    }
+  }
+
+
+  useEffect(() => {
+    fetchCocktail()
+  }, [id])
 
   function handleIngredientDropdown() {
     setShowIngredientDropdown(!showIngredientDropdown)
@@ -12,6 +30,8 @@ function RecipeDetail() {
   function handleInstructionsDropdown() {
     setShowInstructionsDropdown(!showInstructionsDropdown)
   }
+
+  if(!cocktail) return null;
   return (
     <div>
       <div className="container recipe-container">
@@ -24,11 +44,11 @@ function RecipeDetail() {
         <div className="row mt-3">
           <div className="col-12 col-md-6 order-md-last">
             <div>
-              <img src={Drink1} className="recipe-card" alt="" />
+              <img src={cocktail.strDrinkThumb} className="recipe-card" alt="" />
             </div>
           </div>
           <div className="mt-4 col-12 col-md-6 order-md-first">
-            <div className="row mx-4 w-50 recipe-title">Tequila Sunrise</div>
+            <div className="row mx-4 w-50 recipe-title">{cocktail.strDrink}</div>
             <div className="row mx-4 mt-2">
               <span className="badge rounded-pill bg-secondary ing-badge w-25">Tequila</span>
             </div>

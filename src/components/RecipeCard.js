@@ -1,10 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function RecipeCard({title, description, image, link}) {
   return (
     <div>
-      {/* <div className=" pt-2 container">
-        <div className="row justify-content-center justify-content-md-between"> */}
           
         <div class="card">
                 <img src={image} class="card-img-top" alt={title} />
@@ -13,14 +12,11 @@ function RecipeCard({title, description, image, link}) {
                   <p class="card-text">
                     {description}
                   </p>
-                  <a href={link} class="btn btn-primary">
+                  <Link to={`/recipe/${link}`} class="btn btn-primary">
                     View Recipe
-                  </a>
+                  </Link>
                 </div>
               </div>
-        {/* </div>
-      </div> */}
-    
     </div>
   );
 }

@@ -31,7 +31,7 @@ function Results({ value }) {
              title={drink.strDrink}
              description={drink.strInstructions}
              image={drink.strDrinkThumb}
-             link={`/recipe/${drink.idDrink}`}
+             link={drink.idDrink}
              />
             </div>
             )
