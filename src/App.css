@@ -414,3 +414,14 @@ li{
   max-height: 90%;
   max-width: 90%;
 }
+
+
+/* ***************** SEARCH BAR *************************** */
+
+.search-input{
+  width: 75%;
+  border: black solid 1px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  padding:1%;
+}

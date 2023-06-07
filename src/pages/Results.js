@@ -3,12 +3,23 @@ import SearchBar from "../components/SearchBar";
 import SearchContext from "../components/SearchContext";
 import RecipeCard from "../components/RecipeCard";
 
-function Results() {
+function Results({ value }) {
   const { searchResults } = useContext(SearchContext);
 
   return (
     <div>
-        <SearchBar />
+        <div className="row my-5">
+            <div className="col text-center ">
+                <SearchBar />
+            </div>
+        </div>
+
+        <div className="row my-5">
+            <div className="col text-center ">
+                <p>Showing results for '{value}'</p>
+            </div>
+        </div>
+
         <div className="row mx-2 my-2">
       {searchResults &&
         searchResults.map(
