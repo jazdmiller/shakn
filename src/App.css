@@ -220,6 +220,12 @@
   border: none;
 }
 
+.card-text{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 /* ***************** MEDIA QUERIES *************************** */
 
 @media (min-width: 390px){
