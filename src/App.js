@@ -7,9 +7,15 @@ import Search from './pages/Search'
 import Browse from './pages/Browse'
 import About from './pages/About'
 import RecipeDetail from './pages/RecipeDetail'
+import SearchContext from './components/SearchContext'
+import { useState } from 'react';
+import Results from './pages/Results';
 
 function App() {
+  const [searchResults, setSearchResults] = useState([])
+
   return (
+    <SearchContext.Provider value={{ searchResults, setSearchResults}}>
     <Router>
       <div className="App">
         <Navbar />
@@ -20,8 +26,10 @@ function App() {
       <Route path="/browse" element={<Browse/>} />
       <Route path="/about" element={<About />} />
       <Route path="/recipe" element={<RecipeDetail />} />
+      <Route path="/results" element={<Results />} />
       </Routes>
     </Router>
+    </SearchContext.Provider>
   );
 }
 
