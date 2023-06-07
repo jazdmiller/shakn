@@ -4,7 +4,7 @@ import SearchContext from "../components/SearchContext";
 import RecipeCard from "../components/RecipeCard";
 
 function Results({ value }) {
-  const { searchResults } = useContext(SearchContext);
+  const { searchResults, searchInput } = useContext(SearchContext);
 
   return (
     <div>
@@ -16,7 +16,7 @@ function Results({ value }) {
 
         <div className="row my-5">
             <div className="col text-center ">
-                <p>Showing results for '{value}'</p>
+                <p>Showing results for '{searchInput}'</p>
             </div>
         </div>
 

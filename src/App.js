@@ -13,9 +13,10 @@ import Results from './pages/Results';
 
 function App() {
   const [searchResults, setSearchResults] = useState([])
+  const [searchInput, setSearchInput] = useState('')
 
   return (
-    <SearchContext.Provider value={{ searchResults, setSearchResults}}>
+    <SearchContext.Provider value={{ searchResults, setSearchResults, searchInput, setSearchInput}}>
     <Router>
       <div className="App">
         <Navbar />

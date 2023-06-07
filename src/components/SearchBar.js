@@ -4,19 +4,21 @@ import { useNavigate } from 'react-router-dom'
 import SearchContext from './SearchContext'
 
 function SearchBar() {
-  const [searchInput, setSearchInput] = useState('')
-  const { setSearchResults } = useContext(SearchContext)
+  const [searchQuery, setSearchQuery] = useState('')
+  const { setSearchResults, setSearchInput } = useContext(SearchContext)
   const navigate = useNavigate()
 
   const handleSearchChange = (e) => {
-    setSearchInput(e.target.value)
+    setSearchQuery(e.target.value)
 }
 
 const handleSearchSubmit = async (e) => {
   e.preventDefault();
   try{
-    const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`)
+    const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchQuery}`)
     setSearchResults(response.data.drinks);
+    setSearchInput(searchQuery);
+    setSearchQuery('')
     navigate('/results');
   } catch(error) {
     console.error(`Error fetching search results: ${error}`)
@@ -25,7 +27,7 @@ const handleSearchSubmit = async (e) => {
   return (
     <div className='p-0 '>
       <form onSubmit={handleSearchSubmit}>
-        <input className= "search-input" type="text" placeholder='Search cocktail recipes' value={searchInput} onChange={handleSearchChange}></input>
+        <input className= "search-input" type="text" placeholder='Search cocktail recipes' value={searchQuery} onChange={handleSearchChange}></input>
       </form>
     </div>
   )
