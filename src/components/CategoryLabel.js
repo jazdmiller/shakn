@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CategoryLabel({category}) {
+function CategoryLabel({id, category}) {
   return (
     <div>
-       <button className='cat-btn'>
+       <button id={id} className='cat-btn'>
         {category}
        </button>
     </div>

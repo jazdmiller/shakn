@@ -185,8 +185,12 @@
 }
 
 .home-hr{
-  border: 1px solid #000;
-  width: 100%;
+  background-color: black !important;
+  color: black;
+  height: 2px;
+  background: black;
+  border: 0;
+
 }
 
 .cat-btn{
@@ -206,6 +210,16 @@
   border-color: #EA4E45;
 }
 
+#random-btn{
+  padding: 5%;
+  background-color: #FFE2CA;
+  color: #EA4E45;
+  border: none;
+}
+
+#random-btn:hover{
+  border:#EA4E45 solid 2px;
+}
 /* ***************** HOME FEATURE SECTON *************************** */
 
 .card{
@@ -236,7 +250,7 @@
   }
 
   .feature-padding{
-    margin-top: 20%;
+    margin-top: 5%;
   }
 
   .recipe-card{
@@ -297,7 +311,7 @@
     object-fit: cover;
   }
   .feature-padding{
-    margin-top: 10%;
+    margin-top: 5%;
   }
   
   .recipe-card{

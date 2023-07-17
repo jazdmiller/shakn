@@ -6,7 +6,7 @@ function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark nav-background">
         <div class="container-fluid p-0">
-            <div className="border-end border-dark p-2 px-5 nav-logo">
+            <div className=" border-dark p-2 px-5 nav-logo">
           <Link to="/">
             Shakn
           </Link>

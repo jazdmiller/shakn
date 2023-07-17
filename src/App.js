@@ -27,6 +27,8 @@ function App() {
       <Route path="/browse" element={<Browse/>} />
       <Route path="/about" element={<About />} />
       <Route path="/recipe/:id" element={<RecipeDetail />} />
+      <Route path="/recipe/random" element={<RecipeDetail />} />
+      <Route path="/results/:category" element={<Results />} />
       <Route path="/results" element={<Results />} />
       </Routes>
     </Router>
