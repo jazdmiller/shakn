@@ -19,11 +19,10 @@ function Featured() {
   return (
     <div>
       <div className=" feature-padding container">
-        <div className="row mx-2">
+        <div className="row mx-3">
           <div className="col home-label-text">Featured</div>
         </div>
-        <div className="row mx-2">
-          <div className="home-hr mt-2"></div>
+        <div className="row my-3">
         </div>
         <div className="row mx-2 my-3">
           {drinks.map((drink, index) => (

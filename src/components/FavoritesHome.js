@@ -9,11 +9,10 @@ function FavoritesHome() {
   return (
     <div>
         <div className=" feature-padding container">
-        <div className="row mx-2">
+        <div className="row mx-3">
           <div className="col home-label-text">Favorites</div>
         </div>
         <div className="row mx-2">
-          <hr className="home-hr mt-2" />
         </div>
         <div className="col">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
