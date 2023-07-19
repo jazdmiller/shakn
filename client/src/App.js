@@ -10,6 +10,7 @@ import RecipeDetail from './pages/RecipeDetail'
 import SearchContext from './components/SearchContext'
 import { useState } from 'react';
 import Results from './pages/Results';
+import Blog from './pages/Blog';
 
 function App() {
   const [searchResults, setSearchResults] = useState([])
@@ -25,6 +26,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
       <Route path="/browse" element={<Browse/>} />
+      <Route path="/blog" element={<Blog/>} />
       <Route path="/about" element={<About />} />
       <Route path="/recipe/:id" element={<RecipeDetail />} />
       <Route path="/recipe/random" element={<RecipeDetail />} />

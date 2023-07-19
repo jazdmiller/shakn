@@ -32,8 +32,8 @@ function Navbar() {
                 </Link>
               </li>
               <li class="nav-item px-4 nav-item-text">
-                <Link to="/browse"class="nav-link">
-                  Browse
+                <Link to="/blog"class="nav-link">
+                  Blog
                 </Link>
               </li>
               <li class="nav-item px-4 nav-item-text">

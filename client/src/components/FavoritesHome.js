@@ -10,7 +10,7 @@ function FavoritesHome() {
     <div>
         <div className=" feature-padding container">
         <div className="row mx-3">
-          <div className="col home-label-text">Favorites</div>
+          <div className="col home-label-text">On The Blog</div>
         </div>
         <div className="row mx-2">
         </div>
