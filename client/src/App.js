@@ -11,6 +11,7 @@ import SearchContext from './components/SearchContext'
 import { useState } from 'react';
 import Results from './pages/Results';
 import Blog from './pages/Blog';
+import Article from './pages/Article';
 
 function App() {
   const [searchResults, setSearchResults] = useState([])
@@ -28,6 +29,7 @@ function App() {
       <Route path="/browse" element={<Browse/>} />
       <Route path="/blog" element={<Blog/>} />
       <Route path="/about" element={<About />} />
+      <Route path="/article/:id" element={<Article />} />
       <Route path="/recipe/:id" element={<RecipeDetail />} />
       <Route path="/recipe/random" element={<RecipeDetail />} />
       <Route path="/results/:category" element={<Results />} />
