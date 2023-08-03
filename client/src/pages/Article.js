@@ -6,8 +6,7 @@ import axios from 'axios'
 function Article() {
     const { id } = useParams()
     const [article, setArticle] = useState(null)
-    const date = new Date(article.attributes.publishedAt)
-    const formattedDate = date.toLocaleDateString();
+   
 
     function fetchArticle(){
         axios.get(`http://localhost:1337/api/articles/${id}?populate=*`)
@@ -28,7 +27,8 @@ function Article() {
         return <div>Loading...</div>
     }
 
-
+    const date = new Date(article.attributes.publishedAt)
+    const formattedDate = date.toLocaleDateString();
   return (
     <div>
         <div class="container mt-5">
