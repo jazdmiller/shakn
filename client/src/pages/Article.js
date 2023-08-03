@@ -10,6 +10,7 @@ function Article() {
     function fetchArticle(){
         axios.get(`http://localhost:1337/api/articles/${id}?populate=*`)
         .then(response => {
+            console.log(response.data.data)
             setArticle(response.data.data)
         })
         .catch(error => {
@@ -31,7 +32,7 @@ function Article() {
         <div class="container mt-5">
         <div class="article-back-btn row w-100 mb-5">
             <div class="col-5">
-            <Link>
+            <Link to="/blog">
             <i class="fa-solid fa-arrow-left p-3"></i>
             Back To Articles
             </Link>
@@ -42,7 +43,7 @@ function Article() {
         </div>
         <div class="sub-title row ">
             <div class="d-flex justify-content-center">
-                <p class="m-3 mt-4">Published: 7/31/23</p>
+                <p class="m-3 mt-4">Published: {article.attributes.published}</p>
                 <button class="m-3 mt-4"><i class="fa-solid fa-plus px-2"></i>Save Article</button>
                 
             </div>
