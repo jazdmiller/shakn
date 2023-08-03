@@ -6,6 +6,8 @@ import axios from 'axios'
 function Article() {
     const { id } = useParams()
     const [article, setArticle] = useState(null)
+    const date = new Date(article.attributes.publishedAt)
+    const formattedDate = date.toLocaleDateString();
 
     function fetchArticle(){
         axios.get(`http://localhost:1337/api/articles/${id}?populate=*`)
@@ -43,7 +45,7 @@ function Article() {
         </div>
         <div class="sub-title row ">
             <div class="d-flex justify-content-center">
-                <p class="m-3 mt-4">Published: {article.attributes.published}</p>
+                <p class="m-3 mt-4">Published: {formattedDate}</p>
                 <button class="m-3 mt-4"><i class="fa-solid fa-plus px-2"></i>Save Article</button>
                 
             </div>
