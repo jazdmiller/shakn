@@ -1,11 +1,27 @@
-import React from 'react'
-import RecipeCard from './RecipeCard'
-import Drink1 from '../assets/drink-img-1.jpg'
-import Drink2 from '../assets/drink-img-2.jpg'
-import Drink3 from '../assets/drink-img-3.jpg'
+import Reac, { useEffect, useState } from 'react'
+import BlogCard from './BlogCard'
+import axios from 'axios'
 
 
 function BlogHome() {
+
+  const [articles, setArticles] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  function fetchArticles() {
+    axios.get('http://localhost:1337/api/articles?populate=*&_limit=3')
+    .then(response => {
+      setArticles(response.data.data)
+      setLoading(false)
+    })
+    .catch(error => {
+      console.error('Error fetching articles', error)
+    })
+  }
+
+  useEffect(() => {
+    fetchArticles()
+}, [])
   return (
     <div>
         <div className=" feature-padding container">
