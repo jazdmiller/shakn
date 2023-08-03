@@ -1,7 +1,7 @@
 import React from 'react'
 import Drink1 from '../assets/drink-img-1.jpg'
 
-export default function FavoriteCard() {
+export default function BlogCard() {
   return (
     <div>
         <div class="card text-bg-dark">

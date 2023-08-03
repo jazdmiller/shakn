@@ -1,7 +1,7 @@
 import React, { useEffect, useState }from 'react'
 import HeroImg from '../assets/hero-img.png'
 import BrowseHome from '../components/BrowseHome'
-import FavoritesHome from '../components/FavoritesHome'
+import BlogHome from '../components/BlogHome'
 import Featured from '../components/Featured'
 import SearchContext from '../components/SearchContext'
 import axios from 'axios'
@@ -59,7 +59,7 @@ export default function Home() {
         {/* ******  BROWSE SECTION **********/}
         <BrowseHome />
         <Featured />
-        <FavoritesHome />
+        <BlogHome />
         
 
     </div>
