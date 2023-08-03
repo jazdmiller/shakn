@@ -28,10 +28,16 @@ function BlogHome() {
         <div className="row mx-3">
           <div className="col home-label-text">On The Blog</div>
         </div>
-        <div className="row mx-2">
+        <div className="row my-3">
+        </div>
+        <div className="row mx-3">
           {loading ?<p>Loading...</p> : 
           articles.map((article, index) => (
+            <div class="row my-4">
+              <div class="col">
             <BlogCard key={index} article={article}/>
+              </div>
+            </div>
           ))
           }
         </div>
