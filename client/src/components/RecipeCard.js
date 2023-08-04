@@ -5,7 +5,7 @@ function RecipeCard({title, description, image, link}) {
   return (
     <div>
           
-        <div class="card recipe-card">
+        <div class="card recipe-card w-100">
                 <img src={image} class="card-img-top" alt={title} />
                 <div class="card-body">
                   <h5 class="card-title">{title}</h5>
