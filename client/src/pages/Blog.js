@@ -30,7 +30,7 @@ function Blog() {
             <h1 class="text-center my-5 blog-header">Shakn Blog</h1>
         {loading ? <p>Loading...</p> :
             articles.map((article, index) => (
-            <div key={index} class="card card-border w-75 mx-auto bg-dark text-white">
+            <div key={index} class="card card-border w-75 mx-auto bg-dark text-white my-5">
                 <img class="card-img blog-card-img" src={`http://localhost:1337${article.attributes.image.data.attributes.url}`} alt={article.attributes.title}></img>
                 <div class="card-img-overlay p-4">
                     <h5 className="blog-card-title">{article.attributes.title}</h5>

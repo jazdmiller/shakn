@@ -250,10 +250,19 @@
   text-overflow: ellipsis;
 }
 
-/* ***************** HOME FEATURE SECTON *************************** */
+/* ***************** BLOG FEATURE SECTON *************************** */
 .blog-card img{
   height: 30vh;
   object-fit: cover;
+}
+
+.blog-home-label a{
+  text-decoration: underline;
+  color: black;
+}
+
+.blog-home-label a:hover{
+  color: gray;
 }
 
 /* ***************** MEDIA QUERIES *************************** */
@@ -327,7 +336,7 @@
     object-fit: cover;
   }
   .feature-padding{
-    margin-top: 5%;
+    margin-top: 10%;
   }
   
   .recipe-card{
