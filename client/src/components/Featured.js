@@ -26,8 +26,8 @@ function Featured() {
         </div>
         <div className="row mx-2 my-3">
           {drinks.map((drink, index) => (
-        <div className="col-6 col-lg-4">
-            <RecipeCard key={index} title={drink.strDrink} description={drink.strInstructions} image={drink.strDrinkThumb} link={drink.idDrink}/>
+        <div key={index} className="col-6 col-lg-4">
+            <RecipeCard  title={drink.strDrink} description={drink.strInstructions} image={drink.strDrinkThumb} link={drink.idDrink}/>
 
         </div>
           ))}

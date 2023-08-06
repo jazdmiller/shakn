@@ -14,8 +14,8 @@ function BrowseHome() {
 
   const navigate= useNavigate()
 
-  const handleClick = (category) => {
-    navigate(`/results/${category}`)
+  const handleClick = () => {
+    navigate(`/recipe/random`)
   }
 
   return (
@@ -38,7 +38,7 @@ function BrowseHome() {
           ))}
           <div className="my-2 col-12 col-lg-6" >
             <Link to={'/recipe/random'}>
-            <CategoryLabel id="random-btn" category='Random'  />
+            <CategoryLabel id="random-btn" category='Random' onClick={handleClick} />
             </Link>
           </div>
         </div>

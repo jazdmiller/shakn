@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Drink1 from "../assets/drink-img-1.jpg";
 
 function RecipeDetail() {
@@ -8,8 +8,10 @@ function RecipeDetail() {
   const [cocktail, setCocktail] = useState(null)
   const [showIngredientDropdown, setShowIngredientDropdown] = useState(false);
   const [showInstructionsDropdown, setShowInstructionsDropdown] = useState(false);
-  const { id, random } = useParams()
-  let navigate = useNavigate()
+  const { id } = useParams()
+  const navigate = useNavigate()
+ const location = useLocation()
+  const isRandom = location.pathname === "/recipe/random"
 
   const getIngredients = (cocktail) => {
     let ingredients = []
@@ -56,13 +58,13 @@ function RecipeDetail() {
 
 
   useEffect(() => {
-    if(random) {
+    if(isRandom) {
       fetchRandomCocktail()
     }
     else if(id) {
       fetchCocktail()
     }
-  }, [id, random])
+  }, [id, isRandom])
 
   function handleIngredientDropdown() {
     setShowIngredientDropdown(!showIngredientDropdown)
@@ -99,7 +101,7 @@ function RecipeDetail() {
         </div>
         <div className="row details-row d-none d-md-flex">
           <div className="col-6">
-            <div onClick={handleIngredientDropdown}className="row d-flex">
+            <div onClick={handleIngredientDropdown} className="row d-flex">
               <span className="dd-label text-left mx-4">Ingredients</span>
             <div className="row">
                 <ul className="dropdown text-left mx-4 pt-4">
