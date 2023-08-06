@@ -10,6 +10,7 @@ function BrowseHome() {
     "Whiskey",
     "Gin",
     "Wine",
+    "Non-Alcoholic"
   ];
 
   const navigate= useNavigate()

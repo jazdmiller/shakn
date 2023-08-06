@@ -33,6 +33,7 @@ function App() {
       <Route path="/recipe/random" element={<RecipeDetail />} />
       <Route path="/recipe/:id" element={<RecipeDetail />} />
       <Route path="/results/:category" element={<Results />} />
+      <Route path="/results/nonalcoholic" element={<Results />}/>
       <Route path="/results" element={<Results />} />
       </Routes>
     </Router>

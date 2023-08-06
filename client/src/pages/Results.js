@@ -13,21 +13,39 @@ function Results({ value }) {
 
  
     if(category){
-  
-    const fetchCategoryResults = async () => {
-      try{
-        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${category}`)
-        console.log("Response data:", response.data)
-        setSearchResults(response.data.drinks)
-      } catch (error){
-        console.error(`Error fetching category results: ${error}`)
-      }
+      if(category === 'Non-Alcoholic'){
 
-    }
-    fetchCategoryResults()
+        const fetchNonAlcoholic = async () => {
+          try{
+            const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+            console.log("Response data:", response.data)
+            setSearchResults(response.data.drinks)
+          }
+          catch(error){
+            console.error(`Error fetching non-alcoholic results: ${error}`)
+          }
+        }
+        fetchNonAlcoholic()
+      }
+      else {
+
+        const fetchCategoryResults = async () => {
+          try{
+            const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${category}`)
+            console.log("Response data:", response.data)
+            setSearchResults(response.data.drinks)
+          } catch (error){
+            console.error(`Error fetching category results: ${error}`)
+          }
+    
+        }
+        fetchCategoryResults()
+      }
+      
     }
     
-  }, [category, setSearchResults])
+  }, [category, setSearchResults,])
+
 
   
   
@@ -41,7 +59,7 @@ function Results({ value }) {
 
         <div className="row my-5">
             <div className="col text-center ">
-                <p>Showing results for '{category ? category : searchInput}'</p>
+                <p>Showing results for '{category === "nonalcoholic" ? "Non-Alcoholic" : (category ? category : searchInput)}'</p>
             </div>
         </div>
 

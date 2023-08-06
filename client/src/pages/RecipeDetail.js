@@ -12,6 +12,7 @@ function RecipeDetail() {
   const navigate = useNavigate()
  const location = useLocation()
   const isRandom = location.pathname === "/recipe/random"
+  const isNonAlcoholic = location.pathname === "/recipe/nonalcoholic"
 
   const getIngredients = (cocktail) => {
     let ingredients = []
@@ -56,11 +57,26 @@ function RecipeDetail() {
     }
   }
 
+  // const fetchNonAlcoholic = async () => {
+  //   try{
+  //     const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+  //     const nonAlcoholicDetails = response.data.drinks[0]
+  //     const ingredients = getIngredients(nonAlcoholicDetails)
+  //     nonAlcoholicDetails.ingredients = ingredients
+  //     setCocktail(nonAlcoholicDetails)
+  //   }
+  //   catch(error){
+  //     console.error(`Error fetching non-alcoholic cocktail details: ${error}`)
+  //   }
+  // }
 
   useEffect(() => {
     if(isRandom) {
       fetchRandomCocktail()
     }
+    // else if(isNonAlcoholic){
+    //   fetchNonAlcoholic()
+    // }
     else if(id) {
       fetchCocktail()
     }
