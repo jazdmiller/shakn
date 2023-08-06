@@ -56,8 +56,12 @@ function RecipeDetail() {
 
 
   useEffect(() => {
-    fetchCocktail()
-    fetchRandomCocktail()
+    if(random) {
+      fetchRandomCocktail()
+    }
+    else if(id) {
+      fetchCocktail()
+    }
   }, [id, random])
 
   function handleIngredientDropdown() {
