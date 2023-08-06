@@ -27,11 +27,6 @@ function Navbar() {
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item px-4 nav-item-text">
-                <Link to="/search" class="nav-link" aria-current="page" >
-                  Search Recipes
-                </Link>
-              </li>
-              <li class="nav-item px-4 nav-item-text">
                 <Link to="/blog"class="nav-link">
                   Blog
                 </Link>
@@ -40,9 +35,6 @@ function Navbar() {
                 <Link to="/about" class="nav-link" >
                   About
                 </Link>
-              </li>
-              <li class="nav-item px-4 nav-item-text">
-                <Link to="/login" class="nav-link" >Login/Sign</Link>
               </li>
               </ul>
           </div>

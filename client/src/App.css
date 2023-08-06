@@ -256,6 +256,14 @@
   object-fit: cover;
 }
 
+.blog-card a{
+  color: black;
+}
+
+.blog-card a:hover{
+  color: gray;
+}
+
 .blog-home-label a{
   text-decoration: underline;
   color: black;
