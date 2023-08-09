@@ -244,6 +244,12 @@
   border: none;
 }
 
+.recipe-card a:hover{
+  background-color: white;
+  color: #EA4E45;
+  border: 1px solid red;
+}
+
 .card-text{
   overflow:hidden;
   white-space: nowrap;
