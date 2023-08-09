@@ -6,7 +6,7 @@ function About() {
   return (
     <div>
       <div className="container-fluid about-container">
-        <div className="row">
+        <div className="row p-5">
           <div className="col-12 order-first order-md-last col-md-6 about-img text-center mt-5">
             <img
               src={AboutImg}
