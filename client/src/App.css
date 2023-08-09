@@ -86,8 +86,8 @@
 .home-col{
   height: inherit;
   padding: 1%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .hero-text{
@@ -110,7 +110,7 @@
 
 .hero-img{
   max-height: 90%;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 @media (min-width: 390px){
@@ -161,7 +161,7 @@
     text-align: left;
     justify-content: left;
     font-size: 2.9em;
-    width: 75%;
+    width: 100%;
   }
 
   .hero-text-col{
@@ -171,7 +171,7 @@
 
   .hero-img{
     max-height: 90%;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .hero-img-col{
