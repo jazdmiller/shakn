@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 function Navbar() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark nav-background">
-        <div class="container-fluid p-0 navb-container">
+      <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark border-2 nav-background">
+        <div class="container-fluid navb-container">
             <div className=" border-dark p-2 px-5 nav-logo">
           <Link to="/">
             Shakn

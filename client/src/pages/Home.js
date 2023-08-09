@@ -46,7 +46,7 @@ export default function Home() {
                        
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
                     </div>
-                    <div className='row pt-5'>
+                    <div className='row pt-md-5 pt-3'>
                       <div className='col-12 p-0 text-center text-md-start'>
                       <SearchBar />
                       </div>
