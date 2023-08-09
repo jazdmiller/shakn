@@ -25,7 +25,7 @@ function BlogHome() {
 }, [])
   return (
     <div>
-        <div className="feature-padding container">
+        <div className="feature-padding container mb-5">
         <div className="row mx-3 blog-home-label">
           <div className="col-6 home-label-text">On The Blog</div>
           <Link to="/blog" className="col-6 text-end view-article-text">View All Articles</Link>
