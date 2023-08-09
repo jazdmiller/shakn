@@ -108,10 +108,8 @@ function RecipeDetail() {
           <div className=" mt-3 mt-md-0 col-12 col-md-6 ">
             <div className="row mx-4 w-50 recipe-title">{cocktail.strDrink}</div>
             <div className="row mx-4 mt-2">
-              <span className="badge rounded-pill bg-secondary ing-badge w-25">{cocktail.strIngredient1}</span>
-            </div>
-            <div className="row d-none d-md-flex recipe-save-btn w-50 mx-4 mt-5">
-              <button>Save</button>
+              <span className="badge rounded-pill ing-badge">{cocktail.strAlcoholic}</span>
+              <span className="badge rounded-pill ing-badge">{cocktail.strIngredient1}</span>
             </div>
           </div>
         </div>

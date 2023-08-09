@@ -465,6 +465,9 @@ li{
   font-family: 'Inter', sans-serif;
   font-size: 1em !important;
   text-transform: lowercase;
+  width: 40% !important;
+  background-color: #EA4E45;
+  margin-right: 2%;
 }
 
 .dd-label{
