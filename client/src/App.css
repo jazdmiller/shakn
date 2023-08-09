@@ -44,6 +44,10 @@
   border: 2px blue solid;
 } */
 /* *** NAVBAR *********************************************************** */
+.navb-container{
+  padding-right:5% !important;
+  padding-left: 5% !important;
+}
 
 .nav-background{
   background-color: #FFE2CA;
