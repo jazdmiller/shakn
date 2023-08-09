@@ -36,7 +36,7 @@ function BlogHome() {
           {loading ?<p>Loading...</p> : 
           articles.map((article, index) => (
            
-              <div class="col-6">
+              <div class="col-12 col-md-6 mb-3">
             <BlogCard key={index} article={article}/>
               </div>
            
