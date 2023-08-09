@@ -90,8 +90,8 @@
 .home-col{
   height: inherit;
   padding: 1%;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 .hero-text{
@@ -164,12 +164,12 @@
   .hero-text{
     text-align: left;
     justify-content: left;
-    font-size: 2.9em;
+    font-size: 4em;
     width: 100%;
   }
 
   .hero-text-col{
-    padding: 7%;
+    padding: 3%;
     padding-left: 10%;
   }
 
@@ -181,6 +181,7 @@
   .hero-img-col{
     text-align: right;
     padding-right: 3%;
+    padding-top: 5%;;
   }
 }
 /* ***************** HOME BROWSE SECTON *************************** */

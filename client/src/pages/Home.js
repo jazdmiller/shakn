@@ -41,7 +41,7 @@ export default function Home() {
         {/* ***** HERO CONTAINER ****** */}
         <div className='container-fluid home-container' >
             <div className='row test home-col'>
-                <div className='order-last order-md-first hero-text-col col-sm-12 col-md-6 test-col'>
+                <div className='order-last order-md-first hero-text-col col-sm-12 col-md-8 test-col'>
                     <div className='row hero-text mt-3'>
                        
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
@@ -52,7 +52,7 @@ export default function Home() {
                       </div>
                     </div>
                 </div>
-                <div className='order-md-last hero-img-col order-first col-sm-12 col-md-6 test-col'>
+                <div className='order-md-last hero-img-col order-first col-sm-12 col-md-4 test-col'>
                     <img src={HeroImg} alt='drink graphic' className='pt-5 hero-img'/>
                 </div>
             </div>
