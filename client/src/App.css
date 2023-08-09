@@ -77,6 +77,10 @@
   text-transform: uppercase;
 }
 
+.nav-link{
+  font-weight: 600 !important;
+}
+
  /* ***** HERO SECTION ********************************************* */
 /* .home-bg-color{
   background-color: #F5F2ED;
@@ -359,7 +363,7 @@
   }
   
   .recipe-card{
-    height: 21vw;
+    height: 30vw;
     width: 80%;
     object-fit: cover;
   }
@@ -450,6 +454,13 @@ li{
 
 }
 
+.ingredient-card{
+  background-color: #FFFAEC;
+  padding: 3%;
+  border-radius: 20px;
+  width: 70%;
+}
+
 .ing-badge{
   font-family: 'Inter', sans-serif;
   font-size: 1em !important;
@@ -462,6 +473,10 @@ li{
   font-size: 1.3em;
 }
 
+.details-label-line{
+  border-bottom: solid black 1px;
+  padding-bottom: 2%;
+}
 /* ***************** ABOUT PAGE *************************** */
 
 

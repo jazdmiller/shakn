@@ -100,12 +100,12 @@ function RecipeDetail() {
           </div>
         </div>
         <div className="row mt-3">
-          <div className="col-12 col-md-6 order-md-last">
+          <div className="col-12 col-md-6">
             <div>
-              <img src={cocktail.strDrinkThumb} className="recipe-card" alt="" />
+              <img src={cocktail.strDrinkThumb} className="recipe-card mt-0" alt="" />
             </div>
           </div>
-          <div className="mt-4 col-12 col-md-6 order-md-first">
+          <div className=" mt-3 mt-md-0 col-12 col-md-6 ">
             <div className="row mx-4 w-50 recipe-title">{cocktail.strDrink}</div>
             <div className="row mx-4 mt-2">
               <span className="badge rounded-pill bg-secondary ing-badge w-25">{cocktail.strIngredient1}</span>
@@ -116,9 +116,12 @@ function RecipeDetail() {
           </div>
         </div>
         <div className="row details-row d-none d-md-flex">
-          <div className="col-6">
+          <div className="col-6 ">
+            <div className="ingredient-card w-100">
             <div onClick={handleIngredientDropdown} className="row d-flex">
+              <div className="details-label-line">
               <span className="dd-label text-left mx-4">Ingredients</span>
+              </div>
             <div className="row">
                 <ul className="dropdown text-left mx-4 pt-4">
                   {cocktail.ingredients.map((item, index) => (
@@ -127,14 +130,20 @@ function RecipeDetail() {
                 </ul>
             </div>
             </div>
+            </div>
           </div>
-          <div className="col-6 ">
+         
+          <div className="col-6  ">
+            <div className="ingredient-card h-100 w-100">
           <div onClick={handleInstructionsDropdown}className="row d-flex">
-              <span className="dd-label">Instructions</span>
+            <div className="details-label-line">
+              <span className="dd-label text-left mx-4">Instructions</span>
+            </div>
             <div className="row">
-              <p className="dropdown text-left pt-4">
+              <p className="dropdown text-left mx-4 pt-4">
                 {cocktail.strInstructions}
               </p>
+            </div>
             </div>
             </div>
           </div>
