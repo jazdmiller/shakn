@@ -25,7 +25,7 @@ const handleSearchSubmit = async (e) => {
   }
 }
   return (
-    <div className='p-0 text-center text-md-start'>
+    <div className='p-0 '>
       <form onSubmit={handleSearchSubmit}>
         <input className= "search-input" type="text" placeholder='Search cocktail recipes' value={searchQuery} onChange={handleSearchChange}></input>
       </form>
