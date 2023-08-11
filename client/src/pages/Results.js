@@ -64,11 +64,16 @@ function Results({ value }) {
         </div>
 
         <div className="row mx-2 my-2">
-          <div className="d-none d-md-flex col-4 filter-col">
-            <div></div>
+          <div className="d-none d-md-flex col-3">
+            <div className="filter-col w-100 p-4">
+              <div className="row text-center">
+                <span>Filter by spirit</span>
+              </div>
+            </div>
 
           </div>
-          <div className="col-md-8 col-12 results-col">
+          <div className="col-md-9 col-12 ">
+            <div className="results-col w-100 p-4">
             <div className="row">
       {searchResults &&
         searchResults.map(
@@ -85,6 +90,7 @@ function Results({ value }) {
             </div>
             )
         )}
+        </div>
         </div>
         </div>
         </div>
