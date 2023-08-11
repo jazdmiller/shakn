@@ -12,6 +12,7 @@ import { useState } from 'react';
 import Results from './pages/Results';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
+import BrowseAll from './pages/BrowseAll';
 
 function App() {
   const [searchResults, setSearchResults] = useState([])
@@ -26,7 +27,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/browse" element={<Browse/>} />
+      <Route path="/browseall" element={<BrowseAll />} />
       <Route path="/blog" element={<Blog/>} />
       <Route path="/about" element={<About />} />
       <Route path="/article/:id" element={<Article />} />
