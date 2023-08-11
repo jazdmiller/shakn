@@ -1,9 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "../components/SearchBar";
 import SearchContext from "../components/SearchContext";
 import RecipeCard from "../components/RecipeCard";
+import { categories } from "../components/BrowseHome";
+import CategoryLabel from "../components/CategoryLabel"
 
 function Results({ value }) {
   const { searchResults, setSearchResults, searchInput } = useContext(SearchContext);
@@ -65,9 +67,18 @@ function Results({ value }) {
 
         <div className="row mx-2 my-2">
           <div className="d-none d-md-flex col-3">
-            <div className="filter-col w-100 p-4">
+            <div className="results-col w-100 p-4">
               <div className="row text-center">
-                <span>Filter by spirit</span>
+                <span className="filter-text">Filter by spirit</span>
+              </div>
+              <div className="row">
+                {categories.map((category) => (
+                  <div className="col-6">
+                    <Link to={`/results/${category}`} key={category}>
+                      <CategoryLabel category={category} />
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
 

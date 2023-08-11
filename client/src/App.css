@@ -412,14 +412,14 @@
 
 
 /* ***************** RESULTS PAGE *************************** */
-.filter-col{
-  background-color: #FFE2CA;
-}
-
 .results-col{
-  background-color: #FFE2CA;
+  background-color: #FFFAEC;
+  border-radius: 20px;
 }
 
+.filter-text{
+  font-family: 'Calistoga', serif;
+}
 
 
 /* ***************** RECIPE DETAIL PAGE *************************** */

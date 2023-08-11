@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import CategoryLabel from "./CategoryLabel";
 import { useNavigate, Link } from "react-router-dom";
 
+export const categories = [
+  "Tequila",
+  "Vodka",
+  "Rum",
+  "Whiskey",
+  "Gin",
+  "Wine",
+  "Non-Alcoholic"
+];
 function BrowseHome() {
-  const categories = [
-    "Tequila",
-    "Vodka",
-    "Rum",
-    "Whiskey",
-    "Gin",
-    "Wine",
-    "Non-Alcoholic"
-  ];
 
   const navigate= useNavigate()
 
