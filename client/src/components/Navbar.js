@@ -26,6 +26,11 @@ function Navbar() {
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+            <li class="nav-item px-4 nav-item-text">
+                <Link to="/browseall"class="nav-link">
+                  Browse All
+                </Link>
+              </li>
               <li class="nav-item px-4 nav-item-text">
                 <Link to="/blog"class="nav-link">
                   Blog
