@@ -427,6 +427,17 @@
     font-size: .9em;
 }
 
+#random-label{
+  padding: 5%;
+  background-color: #FFE2CA;
+  color: #EA4E45;
+  border: none;
+  border-radius: 10px;
+}
+
+#random-label:hover{
+  border:#EA4E45 solid 2px;
+}
 
 /* ***************** RECIPE DETAIL PAGE *************************** */
 
