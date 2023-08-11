@@ -71,14 +71,15 @@ function Results({ value }) {
               <div className="row text-center">
                 <span className="filter-text">Filter by spirit</span>
               </div>
-              <div className="row">
+              <div className="row mt-3">
                 {categories.map((category) => (
-                  <div className="col-6">
+                  <div className="col-6 my-2">
                     <Link to={`/results/${category}`} key={category}>
-                      <CategoryLabel category={category} />
+                      <CategoryLabel category={category} className="filter-label"/>
                     </Link>
                   </div>
                 ))}
+
               </div>
             </div>
 

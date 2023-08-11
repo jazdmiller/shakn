@@ -11,6 +11,7 @@ export const categories = [
   "Wine",
   "Non-Alcoholic"
 ];
+
 function BrowseHome() {
 
   const navigate= useNavigate()
