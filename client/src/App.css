@@ -422,6 +422,11 @@
   font-family: 'Calistoga', serif;
 }
 
+#filter-col{
+  position: sticky;
+  top: 0;
+}
+
 #filter-label{
     padding: 7%;
     border-radius: 10px;

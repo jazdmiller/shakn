@@ -66,8 +66,8 @@ function Results({ value }) {
         </div>
 
         <div className="row mx-2 my-2">
-          <div className="d-none d-md-flex col-3">
-            <div className="results-col w-100 p-4">
+          <div  className="d-none d-md-flex col-3">
+            <div id="filter-col" className="results-col w-100 p-4">
               <div className="row text-center">
                 <span className="filter-text">Filter by spirit</span>
               </div>
