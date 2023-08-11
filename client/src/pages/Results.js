@@ -75,7 +75,7 @@ function Results({ value }) {
                 {categories.map((category) => (
                   <div className="col-6 my-2">
                     <Link to={`/results/${category}`} key={category}>
-                      <CategoryLabel category={category} className="filter-label"/>
+                      <CategoryLabel category={category} id="filter-label"/>
                     </Link>
                   </div>
                 ))}

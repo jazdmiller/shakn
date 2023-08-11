@@ -421,6 +421,12 @@
   font-family: 'Calistoga', serif;
 }
 
+#filter-label{
+    padding: 7%;
+    border-radius: 10px;
+    font-size: .9em;
+}
+
 
 /* ***************** RECIPE DETAIL PAGE *************************** */
 

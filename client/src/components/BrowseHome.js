@@ -40,7 +40,7 @@ function BrowseHome() {
           ))}
           <div className="my-2 col-6 col-md-4 col-lg-3" >
             <Link to={'/recipe/random'}>
-            <CategoryLabel id="random-btn" category='Random' onClick={handleClick} />
+            <CategoryLabel id="random-btn" category='Random Drink' onClick={handleClick} />
             </Link>
           </div>
         </div>
