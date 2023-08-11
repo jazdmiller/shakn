@@ -415,6 +415,7 @@
 .results-col{
   background-color: #FFFAEC;
   border-radius: 20px;
+  height: fit-content;
 }
 
 .filter-text{
