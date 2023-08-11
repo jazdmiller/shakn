@@ -64,11 +64,17 @@ function Results({ value }) {
         </div>
 
         <div className="row mx-2 my-2">
+          <div className="d-none d-md-flex col-4 filter-col">
+            <div></div>
+
+          </div>
+          <div className="col-md-8 col-12 results-col">
+            <div className="row">
       {searchResults &&
         searchResults.map(
           (drink, index) =>
             (
-            <div className="my-2 col-6 col-md-4 col-lg-3">
+            <div className="my-2 col-6 col-md-4 col-lg-4">
              <RecipeCard 
              key={index}
              title={drink.strDrink}
@@ -79,6 +85,8 @@ function Results({ value }) {
             </div>
             )
         )}
+        </div>
+        </div>
         </div>
     </div>
   );
