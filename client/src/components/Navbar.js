@@ -27,7 +27,7 @@ function Navbar() {
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item px-4 nav-item-text">
-                <Link to="/browseall"class="nav-link">
+                <Link to="/results/all"class="nav-link">
                   Browse All
                 </Link>
               </li>

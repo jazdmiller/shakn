@@ -7,13 +7,34 @@ import RecipeCard from "../components/RecipeCard";
 import { categories } from "../components/BrowseHome";
 import CategoryLabel from "../components/CategoryLabel"
 
+const fetchAllCategories = async () => {
+  const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list')
+  return data.drinks.map((drink => drink.strCategory))
+}
+
+const fetchDrinksByCategory = async (category) => {
+  const { data } = await axios.get((`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`))
+  return data.drinks;
+}
+
+const fetchAllDrinks = async () => {
+  const categories = await fetchAllCategories()
+  const drinksRequests = categories.map(category => fetchDrinksByCategory(category))
+  const drinksArrays = await Promise.all(drinksRequests)
+  return [].concat(...drinksArrays)
+}
+
 function Results({ value }) {
   const { searchResults, setSearchResults, searchInput } = useContext(SearchContext);
   const { category } = useParams()
 
   useEffect(() => {
 
- 
+    if (category === "all"){
+      fetchAllDrinks().then(data => {
+        setSearchResults(data)
+      })
+    }
     if(category){
       if(category === 'Non-Alcoholic'){
 
@@ -46,7 +67,7 @@ function Results({ value }) {
       
     }
     
-  }, [category, setSearchResults,])
+  }, [category, setSearchResults])
 
 
   
@@ -85,7 +106,7 @@ function Results({ value }) {
                     </Link>
                 </div>
                 <div className="col-12 my-3 ">
-                    <Link to={`/recipe/random`}>
+                    <Link to={`/results/all`}>
                       <CategoryLabel className="cat-btn" category='Browse All' id="random-label"/>
                     </Link>
                 </div>
