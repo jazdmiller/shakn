@@ -74,21 +74,21 @@ function Results({ value }) {
 
   return (
     <div>
-      <div className="row my-5">
+      <div className="row mt-5">
         <div className="col text-center ">
           <SearchBar />
         </div>
       </div>
 
-      <div className="d-md-none d-flex row my-5">
+      <div className="d-md-none d-flex row mt-3">
         <div className="col text-center ">
           <button
             type="button"
-            class="btn btn-primary"
+            class="filter-btn w-50"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
-            Launch demo modal
+          Filter
           </button>
           <div
             class="modal fade"

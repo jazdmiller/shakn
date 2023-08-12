@@ -428,6 +428,15 @@
   font-family: 'Calistoga', serif;
 }
 
+.filter-btn{
+    padding: 1%;
+    background-color: #FFFAEC;
+    color: #EA4E45;
+    border: 1px solid #EA4E45;
+    border-radius: 50px;
+    font-size: 1.1em;
+}
+
 #filter-col{
   position: sticky;
   top: 0;
