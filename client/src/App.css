@@ -259,6 +259,12 @@
   border: 1px solid red;
 }
 
+.card-title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .card-text{
   overflow:hidden;
   white-space: nowrap;

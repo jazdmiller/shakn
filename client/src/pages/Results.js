@@ -80,6 +80,12 @@ function Results({ value }) {
             </div>
         </div>
 
+        <div className="row my-2">
+            <div className="col text-center ">
+                <SearchBar />
+            </div>
+        </div>
+
         <div className="row my-5">
             <div className="col text-center ">
                 <p>Showing results for '{category === "nonalcoholic" ? "Non-Alcoholic" : (category ? category : searchInput)}'</p>
@@ -115,7 +121,7 @@ function Results({ value }) {
 
           </div>
           <div className="col-md-9 col-12 ">
-            <div className="results-col w-100 p-4">
+            <div className="results-col w-10 p-2 p-md-4">
             <div className="row">
       {searchResults &&
         searchResults.map(
