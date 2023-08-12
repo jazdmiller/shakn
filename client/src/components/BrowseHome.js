@@ -23,10 +23,10 @@ function BrowseHome() {
   return (
     <div>
       <div className="pt-5 container">
-        <div className="row mx-3 justify-content-space-between">
-          <div className="col home-label-text">Browse</div>
-          
-        </div>
+        <div className="row mx-3 justify-content-space-between blog-home-label">
+          <div className="col-6 home-label-text">Browse</div>
+            <Link to="/results/all" className="col-6 text-end view-article-text">Browse All</Link>
+            </div>
         <div className="row my-3">
         </div>
         <div className="row mx-2 mt-2">
