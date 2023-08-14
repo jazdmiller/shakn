@@ -95,14 +95,14 @@ function Results({ value }) {
             id="exampleModal"
             tabindex="-1"
             role="dialog"
-            aria-labelledby="exampleModalLabel"
+            aria-labelledby="filter"
             aria-hidden="true"
           >
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Modal title
+                  <h5 class="modal-title" id="filter">
+                    Filter by spirit
                   </h5>
                   <button
                     type="button"
@@ -113,7 +113,17 @@ function Results({ value }) {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">...</div>
+                <div class="modal-body">
+                  <div className="row">
+                  {categories.map((category) => (
+                <div className="col-6 my-2">
+                  <Link to={`/results/${category}`} key={category} aria-label="Close" class="close" data-bs-dismiss="modal">
+                    <CategoryLabel category={category} id="filter-label" />
+                  </Link>
+                </div>
+              ))}
+                  </div>
+                </div>
                 <div class="modal-footer">
                   <button
                     type="button"
