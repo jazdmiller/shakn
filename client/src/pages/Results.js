@@ -117,11 +117,29 @@ function Results({ value }) {
                   <div className="row">
                   {categories.map((category) => (
                 <div className="col-6 my-2">
-                  <Link to={`/results/${category}`} key={category} aria-label="Close" class="close" data-bs-dismiss="modal">
-                    <CategoryLabel category={category} id="filter-label" />
+                  <Link to={`/results/${category}`} key={category}  class="close">
+                    <CategoryLabel category={category} id="filter-label"  />
                   </Link>
                 </div>
               ))}
+              <div className="col-12 mt-4">
+                <Link to={`/recipe/random`}>
+                  <CategoryLabel
+                    className="cat-btn"
+                    category="Random Drink"
+                    id="random-label"
+                  />
+                </Link>
+              </div>
+              <div className="col-12 my-3 ">
+                <Link to={`/results/all`}>
+                  <CategoryLabel
+                    className="cat-btn"
+                    category="Browse All"
+                    id="random-label"
+                  />
+                </Link>
+              </div>
                   </div>
                 </div>
                 <div class="modal-footer">
