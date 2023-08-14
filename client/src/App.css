@@ -470,6 +470,10 @@
   background-color: white;
 
 }
+
+.modal-title-text{
+  font-family: 'Inter', sans-serif;
+}
 /* ***************** RECIPE DETAIL PAGE *************************** */
 
 .dropdown-wrapper{
