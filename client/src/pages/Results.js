@@ -150,9 +150,6 @@ function Results({ value }) {
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                    Save changes
-                  </button>
                 </div>
               </div>
             </div>
