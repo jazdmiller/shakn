@@ -460,6 +460,16 @@
   border:#EA4E45 solid 2px;
 }
 
+.close-btn {
+  border: 1px solid #EA4E45;
+  border-radius: 10px;
+  padding:  2% 4%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  background-color: white;
+
+}
 /* ***************** RECIPE DETAIL PAGE *************************** */
 
 .dropdown-wrapper{
