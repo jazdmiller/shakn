@@ -81,6 +81,13 @@ function Results({ value }) {
       </div>
 
       <div className="d-md-none d-flex row mt-3">
+        <div className="col text-center">
+
+        <button type="button">
+          <Link to={'/recipe/random'}>Random Drink
+          </Link>
+        </button>
+        </div>
         <div className="col text-center ">
           <button
             type="button"
