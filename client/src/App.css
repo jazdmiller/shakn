@@ -297,6 +297,10 @@
 /* ***************** MEDIA QUERIES *************************** */
 
 @media (min-width: 390px){
+
+  .search-input{
+    width: 90% !important;
+  }
   .card-img-top{
     width: 100%;
     height: 40vw;
@@ -359,6 +363,11 @@
 }
 
 @media (min-width: 768px){
+
+  .search-input{
+    width: 75%;
+  }
+
   .card-img-top{
     width: 100%;
     height: 20vw;
@@ -437,6 +446,14 @@
     font-size: 1.1em;
 }
 
+/* .filter-btn.random-btn-mobile{
+  padding: 2%; 
+} */
+.filter-btn a{
+  text-decoration: none;
+  color:#EA4E45;
+}
+
 #filter-col{
   position: sticky;
   top: 0;
@@ -473,6 +490,10 @@
 
 .modal-title-text{
   font-family: 'Inter', sans-serif;
+}
+
+#mobile-search{
+width: 90% !important;
 }
 /* ***************** RECIPE DETAIL PAGE *************************** */
 
@@ -561,10 +582,11 @@ li{
 
 .search-input{
   width: 75%;
-  border: black solid 1px;
+  border: lightgray solid 1px;
   border-radius: 50px;
   font-size: 1.1em;
-  padding: 1% 2%;
+  padding: 1% 5%;
+  color: lightgray;
 }
 
 /* ***************** BLOG PAGE *************************** */

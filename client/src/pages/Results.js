@@ -76,22 +76,22 @@ function Results({ value }) {
     <div>
       <div className="row mt-5">
         <div className="col text-center ">
-          <SearchBar />
+          <SearchBar id="mobile-search" />
         </div>
       </div>
 
       <div className="d-md-none d-flex row mt-3">
-        <div className="col text-center">
+        <div className="col-6 text-center">
 
-        <button type="button">
+        <button className="filter-btn random-btn-mobile w-100" type="button">
           <Link to={'/recipe/random'}>Random Drink
           </Link>
         </button>
         </div>
-        <div className="col text-center ">
+        <div className="col-6 text-start ">
           <button
             type="button"
-            class="filter-btn w-50"
+            class="filter-btn w-100"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
