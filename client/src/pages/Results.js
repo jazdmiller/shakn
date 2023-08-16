@@ -114,15 +114,7 @@ function Results({ value }) {
                   </Link>
                 </div>
               ))}
-              <div className="col-12 mt-4">
-                <Link to={`/recipe/random`}>
-                  <CategoryLabel
-                    className="cat-btn"
-                    category="Random Drink"
-                    id="random-label"
-                  />
-                </Link>
-              </div>
+            
               <div className="col-12 my-3 ">
                 <Link to={`/results/all`}>
                   <CategoryLabel
