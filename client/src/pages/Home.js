@@ -7,6 +7,7 @@ import SearchContext from '../components/SearchContext'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
+import {motion} from 'framer-motion'
 
 export default function Home() {
     
@@ -42,10 +43,17 @@ export default function Home() {
         <div className='container-fluid home-container' >
             <div className='row test home-col'>
                 <div className='order-last order-md-first hero-text-col col-sm-12 col-md-8 test-col'>
-                    <div className='row hero-text mt-3'>
+                    <motion.div 
+                    initial={{x: -1000}}
+                    animate={{x: 0}}
+                    transition={{
+                      duration: "2",
+                      delay: ".5"
+                    }}
+                    className='row hero-text mt-3'>
                        
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
-                    </div>
+                    </motion.div>
                     <div className='row pt-md-5 pt-3'>
                       <div className='col-12 p-0 text-center text-md-start'>
                       <SearchBar />
