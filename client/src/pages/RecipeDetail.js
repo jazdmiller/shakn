@@ -101,8 +101,8 @@ function RecipeDetail() {
         </div>
         <div className="row mt-3">
           <div className="col-12 col-md-6">
-            <div>
-              <img src={cocktail.strDrinkThumb} className="recipe-card mt-0" alt="" />
+            <div >
+              <img style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} src={cocktail.strDrinkThumb} className="recipe-card mt-0" alt="" />
             </div>
           </div>
           <div className=" mt-3 mt-md-0 col-12 col-md-6 ">
@@ -115,7 +115,7 @@ function RecipeDetail() {
         </div>
         <div className="row details-row d-none d-md-flex">
           <div className="col-6 ">
-            <div className="ingredient-card w-100">
+            <div style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} className="ingredient-card w-100">
             <div onClick={handleIngredientDropdown} className="row d-flex">
               <div className="details-label-line">
               <span className="dd-label text-left mx-4">Ingredients</span>
@@ -132,7 +132,7 @@ function RecipeDetail() {
           </div>
          
           <div className="col-6  ">
-            <div className="ingredient-card h-100 w-100">
+            <div style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} className="ingredient-card h-100 w-100">
           <div onClick={handleInstructionsDropdown}className="row d-flex">
             <div className="details-label-line">
               <span className="dd-label text-left mx-4">Instructions</span>

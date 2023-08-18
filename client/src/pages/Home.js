@@ -47,8 +47,7 @@ export default function Home() {
                     initial={{x: -1000}}
                     animate={{x: 0}}
                     transition={{
-                      duration: "2",
-                      delay: ".5"
+                      duration: "1"
                     }}
                     className='row hero-text mt-3'>
                        
