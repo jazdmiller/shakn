@@ -36,9 +36,30 @@ function AnimatedText({text}) {
     }
   return (
     <motion.div style={{overflow: "hidden", display: "flex", flexWrap: "wrap"}} variants={container} initial="hidden" animate="visible">
-        {words.map((word, index) => (
-        <motion.span  style={word === "Discover" ? { flex: '1 100%' } : {}} variants={child}  key={index} className="hero-text">{word}</motion.span>
-        ))}
+         {words.map((word, index) => {
+            if (word === "Discover:") {
+                return (
+                    <div key={index} style={{ width: '100%' }} >
+                        <motion.span 
+                            variants={child} 
+                            className="hero-text"
+                        >
+                            {word}
+                        </motion.span>
+                    </div>
+                );
+            } else {
+                return (
+                    <motion.span 
+                        variants={child} 
+                        className="hero-text"
+                        key={index}
+                    >
+                        {word + (index !== words.length - 1 ? ' ' : '')}
+                    </motion.span>
+                );
+            }
+        })}
     </motion.div>
   )
 }
