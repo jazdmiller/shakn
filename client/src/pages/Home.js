@@ -8,6 +8,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
 import {motion} from 'framer-motion'
+import AnimatedText from '../components/AnimatedText'
 
 export default function Home() {
     
@@ -36,14 +37,47 @@ export default function Home() {
     //         searchCocktails()
     //     }
     // }, [searchInput])
+    const container = {
+      hidden: {opacity: 0},
+      visible: (i = 1) => ({
+          opacity: 1, 
+          transition: {staggerChildren: 0.12, delayChildren: 0.04 * i }
+      })
+  }
 
+  const child = {
+      visible: {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          transition: {
+              type: "spring",
+              damping: 12,
+              stiffness: 100
+          }
+      },
+      hidden: {
+          opacity: 0,
+          y: 120,
+          x: 20,
+          transition: {
+              type: "spring",
+              damping: 12,
+              stiffness: 100
+          }
+
+      }
+  }
   return (
     <div>
         {/* ***** HERO CONTAINER ****** */}
         <div className='container-fluid home-container' >
             <div className='row test home-col'>
-                <div className='order-last order-md-first hero-text-col col-sm-12 col-md-8 test-col'>
-                    <motion.div 
+                <motion.div variants={container}className='order-last order-md-first hero-text-col col-sm-12 col-md-8 test-col'>
+                  <AnimatedText text="Sip, Savor, and Discover: Your Mixology Adventure Awaits"/>
+                  {/* <motion.div variants={child}><AnimatedText className="row" text="Sip, Savor, and" /></motion.div>
+                  <motion.div variants={child}><AnimatedText className="row" text="Discover" /></motion.div> */}
+                    {/* <motion.span 
                     initial={{x: -1000}}
                     animate={{x: 0}}
                     transition={{
@@ -52,13 +86,13 @@ export default function Home() {
                     className='row hero-text mt-3'>
                        
                             Sip, Savor, and<p className='p-0 m-0 discover-text'>Discover:</p>Your Mixology<br /> Adventure Awaits
-                    </motion.div>
+                    </motion.span> */}
                     <div className='row pt-md-5 pt-3'>
                       <div className='col-12 p-0 text-center text-md-start'>
                       <SearchBar />
                       </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className='order-md-last hero-img-col order-first col-sm-12 col-md-4 test-col'>
                     <img src={HeroImg} alt='drink graphic' className='pt-5 hero-img'/>
                 </div>

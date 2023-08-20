@@ -103,6 +103,8 @@
   font-size: 4vw;
   line-height: 1.5em;
   color: #EA4E45;
+  margin-right: 3%;
+ 
 }
 
 .discover-text{
@@ -169,7 +171,7 @@
     text-align: left;
     justify-content: left;
     font-size: 4em;
-    width: 100%;
+    
   }
 
   .hero-text-col{
