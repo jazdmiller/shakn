@@ -91,6 +91,21 @@ export default function Home() {
         }
     }
   }
+
+  const image = {
+    hidden: {
+        opacity: 0,
+        x: -120
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            type: "fadeIn",
+            duration: .7,
+        }
+    }
+  }
   return (
     <div>
         {/* ***** HERO CONTAINER ****** */}
@@ -116,9 +131,9 @@ export default function Home() {
                       </div>
                     </div>
                 </motion.div>
-                <div className='order-md-last hero-img-col order-first col-sm-12 col-md-4 test-col'>
+                <motion.div variants={image} initial="hidden" animate="visible" className='order-md-last hero-img-col order-first col-sm-12 col-md-4 test-col'>
                     <img src={HeroImg} alt='drink graphic' className='pt-5 hero-img'/>
-                </div>
+                </motion.div>
             </div>
         </div>
 
