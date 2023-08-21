@@ -1,14 +1,47 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion'
+
 
 function Navbar() {
+
+  const container = {
+    hidden: {opacity: 0},
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: {staggerChildren: 0.02, delayChildren: 0.02 * i }
+    })
+  }
+
+  const child = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100
+      }
+    },
+    hidden: {
+      opacity: 0,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100
+      }
+    }
+  }
+  
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark border-2 nav-background">
-        <div class="container-fluid navb-container">
+        <motion.div variants={container} initial="hidden" animate="visible" class="container-fluid navb-container">
             <div className=" border-dark p-2 px-5 nav-logo">
           <Link to="/">
-            Shakn
+            <motion.div variants={child}>Shakn</motion.div>
           </Link>
           </div>
           <div>
@@ -26,24 +59,24 @@ function Navbar() {
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-            <li class="nav-item px-4 nav-item-text">
+            <motion.li variants={child} class="nav-item px-4 nav-item-text">
                 <Link to="/results/all"class="nav-link">
                   Browse All
                 </Link>
-              </li>
-              <li class="nav-item px-4 nav-item-text">
+              </motion.li>
+              <motion.li variants={child} class="nav-item px-4 nav-item-text">
                 <Link to="/blog"class="nav-link">
                   Blog
                 </Link>
-              </li>
-              <li class="nav-item px-4 nav-item-text">
+              </motion.li>
+              <motion.li variants={child} class="nav-item px-4 nav-item-text">
                 <Link to="/about" class="nav-link" >
                   About
                 </Link>
-              </li>
+              </motion.li>
               </ul>
           </div>
-        </div>
+        </motion.div>
       </nav>
     </div>
   );

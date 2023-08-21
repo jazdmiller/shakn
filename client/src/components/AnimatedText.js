@@ -1,5 +1,5 @@
 import React from 'react'
-import {motion} from 'framer-motion'
+import {color, motion} from 'framer-motion'
 
 function AnimatedText({text}) {
     const words = text.split(" ")
@@ -9,7 +9,7 @@ function AnimatedText({text}) {
         hidden: {opacity: 0},
         visible: (i = 1) => ({
             opacity: 1, 
-            transition: {staggerChildren: 0.05, delayChildren: 0.02 * i }
+            transition: {staggerChildren: 0.03, delayChildren: 0.02 * i }
         })
     }
 
@@ -19,7 +19,7 @@ function AnimatedText({text}) {
             y: 0,
             transition: {
                 type: "spring",
-                damping: 12,
+                damping: 20,
                 stiffness: 100
             }
         },
@@ -39,10 +39,11 @@ function AnimatedText({text}) {
          {words.map((word, index) => {
             if (word === "Discover:") {
                 return (
-                    <div key={index} style={{ width: '100%' }} >
+                    <div key={index} style={{ overflow: "hidden", display: "flex", flexWrap: "wrap", width: '100%', color: "black"}} >
                         <motion.span 
                             variants={child} 
                             className="hero-text"
+                            style={{color: "black"}}
                         >
                             {word}
                         </motion.span>
