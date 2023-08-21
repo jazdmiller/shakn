@@ -1,9 +1,42 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import RecipeCard from "./RecipeCard";
+import { motion } from 'framer-motion'
 
 function Featured() {
   const [drinks, setDrinks] = useState([])
+
+  const container = {
+    hidden: {opacity: 0},
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+        delayChildren: .3 * i
+      }
+    })
+  }
+
+  const child = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100
+      }
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100
+      }
+    }
+  }
 
   useEffect(() => {
   const getRandomDrink = async () => {
@@ -24,14 +57,14 @@ function Featured() {
         </div>
         <div className="row my-3">
         </div>
-        <div className="row mx-2 my-3">
+        <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{once: true}} className="row mx-2 my-3">
           {drinks.map((drink, index) => (
-        <div key={index} className="col-12 col-md-6 col-lg-4">
+        <motion.div variants={child} key={index} className="col-12 col-md-6 col-lg-4">
             <RecipeCard  title={drink.strDrink} description={drink.strInstructions} image={drink.strDrinkThumb} link={drink.idDrink}/>
 
-        </div>
+        </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
