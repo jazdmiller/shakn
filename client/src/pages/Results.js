@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "../components/SearchBar";
@@ -6,6 +6,7 @@ import SearchContext from "../components/SearchContext";
 import RecipeCard from "../components/RecipeCard";
 import { categories } from "../components/BrowseHome";
 import CategoryLabel from "../components/CategoryLabel";
+import {motion} from 'framer-motion'
 
 const fetchAllCategories = async () => {
   const { data } = await axios.get(
@@ -31,10 +32,49 @@ const fetchAllDrinks = async () => {
 };
 
 function Results({ value }) {
+const container ={
+  hidden: {opacity: 0},
+  visible: (i = 1) => ({
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.02 * i
+    }
+  })
+}
+
+const child = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 100
+    }
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 100
+    }
+  }
+}
+
+
+
   const { searchResults, setSearchResults, searchInput } =
     useContext(SearchContext);
   const { category } = useParams();
 
+  const [uniqueKey, setUniqueKey] = useState(Date.now())
+
+useEffect(() => {
+  setUniqueKey(Date.now())
+}, [category])
   useEffect(() => {
     if (category === "all") {
       fetchAllDrinks().then((data) => {
@@ -199,10 +239,10 @@ function Results({ value }) {
         </div>
         <div className="col-md-9 col-12 ">
           <div className="results-col w-10 p-2 p-md-4">
-            <div className="row">
+            <motion.div key={uniqueKey} variants={container} initial="hidden" animate="visible" className="row">
               {searchResults &&
                 searchResults.map((drink, index) => (
-                  <div className="my-2 col-6 col-md-4 col-lg-4">
+                  <motion.div variants={child} className="my-2 col-6 col-md-4 col-lg-4">
                     <RecipeCard
                       key={index}
                       title={drink.strDrink}
@@ -210,9 +250,9 @@ function Results({ value }) {
                       image={drink.strDrinkThumb}
                       link={drink.idDrink}
                     />
-                  </div>
+                  </motion.div>
                 ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
