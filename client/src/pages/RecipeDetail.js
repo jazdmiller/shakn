@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Drink1 from "../assets/drink-img-1.jpg";
+import { motion } from "framer-motion";
 
 function RecipeDetail() {
 
@@ -13,6 +14,40 @@ function RecipeDetail() {
  const location = useLocation()
   const isRandom = location.pathname === "/recipe/random"
   const isNonAlcoholic = location.pathname === "/recipe/nonalcoholic"
+
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      delayChildren: 0.02 * i
+      }
+    })
+  }
+
+  const child = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100
+      }
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100
+      }
+    }
+  }
 
   const getIngredients = (cocktail) => {
     let ingredients = []
@@ -92,29 +127,29 @@ function RecipeDetail() {
   if(!cocktail) return null;
   return (
     <div>
-      <div className="container recipe-container">
+      <motion.div variants={container} initial="hidden" animate="visible" className="container recipe-container">
         <div className="row">
-          <div className="recipe-back col mt-5 mx-3">
+          <motion.div variants={child} className="recipe-back col mt-5 mx-3">
           <i className=" fa fa-light fa-arrow-left mx-2 " onClick={() => navigate(-1)}></i>
             <a href="#"onClick={(e) => {e.preventDefault(); navigate(-1)}}>Back</a>
-          </div>
+          </motion.div>
         </div>
         <div className="row mt-3">
           <div className="col-12 col-md-6">
-            <div >
+            <motion.div variants={child}>
               <img style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} src={cocktail.strDrinkThumb} className="recipe-card mt-0" alt="" />
-            </div>
+            </motion.div>
           </div>
-          <div className=" mt-3 mt-md-0 col-12 col-md-6 ">
+          <motion.div variants={child} className=" mt-3 mt-md-0 col-12 col-md-6 ">
             <div className="row mx-4 w-50 recipe-title">{cocktail.strDrink}</div>
             <div className="row mx-4 mt-2">
               <span className="badge rounded-pill ing-badge">{cocktail.strAlcoholic}</span>
               <span className="badge rounded-pill ing-badge">{cocktail.strIngredient1}</span>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="row details-row d-none d-md-flex">
-          <div className="col-6 ">
+          <motion.div variants={child} className="col-6 ">
             <div style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} className="ingredient-card w-100">
             <div onClick={handleIngredientDropdown} className="row d-flex">
               <div className="details-label-line">
@@ -129,9 +164,9 @@ function RecipeDetail() {
             </div>
             </div>
             </div>
-          </div>
+          </motion.div>
          
-          <div className="col-6  ">
+          <motion.div variants={child} className="col-6  ">
             <div style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} className="ingredient-card h-100 w-100">
           <div onClick={handleInstructionsDropdown}className="row d-flex">
             <div className="details-label-line">
@@ -144,7 +179,7 @@ function RecipeDetail() {
             </div>
             </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="row details-row d-md-none">
           <div className="col-12">
@@ -186,7 +221,7 @@ function RecipeDetail() {
           <hr className="home-hr mt-2" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
