@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion'
 
 
 function Navbar() {
 
+  const [navBarOpen, setNavBarOpen] = useState(false)
+
   const container = {
     hidden: {opacity: 0},
     visible: (i = 1) => ({
       opacity: 1,
-      transition: {staggerChildren: 0.02, delayChildren: 0.02 * i }
+      transition: {staggerChildren: 0.02, delayChildren: navBarOpen ? 0.02 * i : 0.02 * i}
     })
   }
 
@@ -34,6 +36,9 @@ function Navbar() {
     }
   }
   
+  const toggleNavBar = () => {
+    setNavBarOpen(!navBarOpen)
+  }
 
   return (
     <div>
@@ -53,12 +58,13 @@ function Navbar() {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={toggleNavBar}
           >
             <span class="navbar-toggler-icon"></span>
           </button>
           </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
+          <motion.div variants={container} initial="hidden" animate="visible" class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul  class="navbar-nav">
             <motion.li variants={child} class="nav-item px-4 nav-item-text">
                 <Link to="/results/all"class="nav-link">
                   Browse All
@@ -75,7 +81,7 @@ function Navbar() {
                 </Link>
               </motion.li>
               </ul>
-          </div>
+          </motion.div>
         </motion.div>
       </nav>
     </div>

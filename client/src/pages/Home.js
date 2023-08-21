@@ -68,6 +68,29 @@ export default function Home() {
 
       }
   }
+
+  const searchBar = {
+    hidden: {
+        opacity: 0,
+        y: -20,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    },
+
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100,
+            delay: .3
+        }
+    }
+  }
   return (
     <div>
         {/* ***** HERO CONTAINER ****** */}
@@ -89,7 +112,7 @@ export default function Home() {
                     </motion.span> */}
                     <div className='row pt-md-5 pt-3'>
                       <div className='col-12 p-0 text-center text-md-start'>
-                      <SearchBar />
+                      <motion.div variants={searchBar} initial="hidden" animate="visible"><SearchBar /></motion.div>
                       </div>
                     </div>
                 </motion.div>
