@@ -202,7 +202,7 @@ function RecipeDetail() {
             </div>
           <hr className="home-hr mt-2" />
           </div>
-          <div className="col-12 ">
+          <motion.div variants={child} className="col-12 ">
           <div onClick={handleInstructionsDropdown}className="row d-flex">
             <div className="col-6 d-flex justify-content-center">
               <span className="dd-label">Instructions</span>
@@ -210,16 +210,16 @@ function RecipeDetail() {
             <div className="dropdown-wrapper col-5 d-flex align-items-center justify-content-end px-3">
             <i class="fa fa-light fa-caret-down fa-xl"></i>
             </div>
-            <div className="row">
+            <motion.div variants={child} className="row">
             {showInstructionsDropdown && (
               <p className="dropdown text-center pt-4">
                 {cocktail.strInstructions}
               </p>
             )}
-            </div>
+            </motion.div>
             </div>
           <hr className="home-hr mt-2" />
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </div>
