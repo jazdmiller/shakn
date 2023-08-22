@@ -71,11 +71,6 @@ function Navbar() {
                 </Link>
               </motion.li>
               <motion.li variants={child} class="nav-item px-4 nav-item-text">
-                <Link to="/blog"class="nav-link">
-                  Blog
-                </Link>
-              </motion.li>
-              <motion.li variants={child} class="nav-item px-4 nav-item-text">
                 <Link to="/about" class="nav-link" >
                   About
                 </Link>
