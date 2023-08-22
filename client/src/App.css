@@ -334,6 +334,8 @@
     font-family: 'Inter', sans-serif;
     color: #EA4E45;
     font-size: 1.1em;
+    width: 100%;
+    
   }
 
   .about-row{
@@ -412,8 +414,13 @@
   }
 
   .about-title{
-    margin-top: 15% !important;
+    
     font-size: 2.5em;
+  }
+
+  .about-text{
+    width: 75%;
+    font-size: 1.3em;
   }
 
 }
@@ -578,6 +585,7 @@ li{
 
 .about-container{
   background-color: #FFE2CA;
+  height: 100%;
 }
 
 .about-img img{
