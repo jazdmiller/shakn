@@ -454,6 +454,7 @@
     border: 1px solid #EA4E45;
     border-radius: 50px;
     font-size: 1.1em;
+    width: 80%;
 }
 
 .filter-btn.random-btn-mobile{

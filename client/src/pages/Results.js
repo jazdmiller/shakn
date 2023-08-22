@@ -123,7 +123,7 @@ useEffect(() => {
       <div className="d-md-none d-flex row mt-3">
         <div className="col-6 text-center">
 
-        <button className="filter-btn random-btn-mobile w-100" type="button">
+        <button className="filter-btn random-btn-mobile" type="button">
           <Link to={'/recipe/random'}>Random Drink
           </Link>
         </button>
@@ -131,7 +131,7 @@ useEffect(() => {
         <div className="col-6 text-start ">
           <button
             type="button"
-            class="filter-btn w-100"
+            class="filter-btn"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
