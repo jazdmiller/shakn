@@ -127,7 +127,7 @@ function RecipeDetail() {
   if(!cocktail) return null;
   return (
     <div>
-      <motion.div variants={container} initial="hidden" animate="visible" className="container recipe-container">
+      <motion.div variants={container} initial="hidden" animate="visible" className="container recipe-container mb-5">
         <div className="row">
           <motion.div variants={child} className="recipe-back col mt-5 mx-3">
           <i className=" fa fa-light fa-arrow-left mx-2 " onClick={() => navigate(-1)}></i>
