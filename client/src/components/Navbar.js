@@ -40,6 +40,8 @@ function Navbar() {
     setNavBarOpen(!navBarOpen)
   }
 
+
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark border-2 nav-background">
@@ -66,12 +68,12 @@ function Navbar() {
           <motion.div variants={container} initial="hidden" animate="visible" class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul  class="navbar-nav">
             <motion.li variants={child} class="nav-item px-4 nav-item-text">
-                <Link to="/results/all"class="nav-link">
+                <Link onClick={() => setNavBarOpen(false)} to="/results/all"class="nav-link">
                   Browse All
                 </Link>
               </motion.li>
               <motion.li variants={child} class="nav-item px-4 nav-item-text">
-                <Link to="/about" class="nav-link" >
+                <Link to="/about" data-bs-toggle="collapse" data-bs-target="#navbarNav"  class="nav-link" >
                   About
                 </Link>
               </motion.li>

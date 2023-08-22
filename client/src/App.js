@@ -13,6 +13,7 @@ import Results from './pages/Results';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
 import BrowseAll from './pages/BrowseAll';
+import AnimatedNav from './components/AnimatedNav';
 
 function App() {
   return (
@@ -35,9 +36,10 @@ function AppContent() {
   return (
     <SearchContext.Provider value={{ searchResults, setSearchResults, searchInput, setSearchInput}}>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
+        <AnimatedNav />
       </div>
-      <Routes>
+      {/* <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
       <Route path="/blog" element={<Blog/>} />
@@ -48,7 +50,7 @@ function AppContent() {
       <Route path="/results/:category" element={<Results />} />
       <Route path="/results/nonalcoholic" element={<Results />}/>
       <Route path="/results" element={<Results />} />
-      </Routes>
+      </Routes> */}
 
     </SearchContext.Provider>
   );
