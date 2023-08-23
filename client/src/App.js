@@ -36,8 +36,8 @@ function AppContent() {
   return (
     <SearchContext.Provider value={{ searchResults, setSearchResults, searchInput, setSearchInput}}>
       <div className="App">
-        {/* <Navbar /> */}
-        <AnimatedNav />
+        <Navbar />
+        {/* <AnimatedNav /> */}
       </div>
       {/* <Routes>
       <Route path="/" element={<Home />} />

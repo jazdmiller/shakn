@@ -45,8 +45,30 @@
 } */
 
 /* *** ANIMATED NAVBAR *********************************************************** */
+
+.container-fluid{
+  position: relative;
+}
 .animate-nav-container{
   height: 100vh;
+  background-color: #EA4E45;
+  width: 100%;
+  position: relative;
+}
+
+.navbar-row {
+  border-bottom: 1px solid black;
+  background-color: #FFE2CA;
+}
+
+.menu-bars{
+  cursor: pointer;
+}
+
+.menu-container{
+  height: 100;
+  width: 100%;
+  color: white;
 }
 
 
@@ -58,6 +80,13 @@
 .navb-container{
   padding-right:5% !important;
   padding-left: 5% !important;
+}
+
+.navbar-collapse{
+  height: 100vh;
+}
+.collapsing{
+  height: 100vh;
 }
 
 .nav-background{

@@ -51,34 +51,51 @@ function Navbar() {
             <motion.div variants={child}>Shakn</motion.div>
           </Link>
           </div>
-          <div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            onClick={toggleNavBar}
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="mobile-toggler d-lg-none">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
+              <i class="fa-solid fa-bars fa-2x bars-icon"></i>
+            </a>
           </div>
-          <motion.div variants={container} initial="hidden" animate="visible" class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul  class="navbar-nav">
-            <motion.li variants={child} class="nav-item px-4 nav-item-text">
-                <Link onClick={() => setNavBarOpen(false)} to="/results/all"class="nav-link">
-                  Browse All
-                </Link>
-              </motion.li>
-              <motion.li variants={child} class="nav-item px-4 nav-item-text">
-                <Link to="/about" data-bs-toggle="collapse" data-bs-target="#navbarNav"  class="nav-link" >
-                  About
-                </Link>
-              </motion.li>
-              </ul>
-          </motion.div>
+
+        
+          <div
+            class="modal fade"
+            id="navbModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-slideout" role="document">
+              <div class="modal-content">
+                <div class="modal-header d-flex">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="modal-line">
+                    <a href="/">Home</a>
+                  </div>
+
+                  <div class="modal-line">
+                    <a href="/">Browse All</a>
+                  </div>
+
+                  <div class="modal-line">
+                    <a href="/">About</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a type="button" data-bs-dismiss="modal"> Close </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </nav>
     </div>
