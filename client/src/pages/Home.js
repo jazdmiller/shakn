@@ -90,7 +90,7 @@ export default function Home() {
             <div className='row test home-col'>
                 <motion.div variants={container}className='order-last order-md-first hero-text-col col-sm-12 col-md-8 test-col'>
                   <AnimatedText text="Sip, Savor, and Discover: Your Mixology Adventure Awaits"/>
-                    <div className='row pt-md-5 pt-3'>
+                    <div className='row pt-md-5 pt-3 mt-5 mt-md-0'>
                       <div className='col-12 p-0 text-center text-md-start'>
                       <motion.div variants={searchBar} initial="hidden" animate="visible"><SearchBar /></motion.div>
                       </div>
