@@ -301,6 +301,7 @@
   width: 100%;
   border-radius: 20px;
   background-color: #EA4E45;
+  transition: background-color .5s;
   border: 1px solid #EA4E45;
   color: white;
   font-family: 'Calistoga', serif;
@@ -316,12 +317,15 @@
 #random-btn{
   padding: 10%;
   background-color: #FFE2CA;
+  transition: background-color .5s;
   color: #EA4E45;
-  border: none;
+  border: #FFE2CA solid 1px;
 }
 
 #random-btn:hover{
-  border:#EA4E45 solid 2px;
+  border:#EA4E45 solid 1px;
+  background-color: white;
+  color: #EA4E45;
 }
 /* ***************** HOME FEATURE SECTON *************************** */
 
