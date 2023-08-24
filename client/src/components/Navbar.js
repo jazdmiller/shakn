@@ -110,11 +110,11 @@ function Navbar() {
                   </motion.div>
 
                   <motion.div variants={child} class="modal-line">
-                    <a href="/">Browse All</a>
+                    <a href="/results/all">Browse All</a>
                   </motion.div>
 
                   <motion.div variants={child} class="modal-line">
-                    <a href="/">About</a>
+                    <a href="/about">About</a>
                   </motion.div>
                 </AnimatePresence>
                 </motion.div>
