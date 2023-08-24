@@ -77,6 +77,53 @@
 
 
 /* *** NAVBAR *********************************************************** */
+.modal-header-nav{
+  border-bottom: none !important;
+  font-family: 'Calistoga', serif;
+  font-size: 1.3em;
+}
+
+.btn-close {
+  color: #FFE2CA !important;
+}
+
+
+.modal-content-nav{
+  background-color: #EA4E45 !important;
+  color:#FFE2CA !important;
+}
+
+.modal-title-nav{
+  font-family: 'Calistoga', serif;
+  font-size: 1.5em;
+}
+
+.modal-body-nav > div{
+  padding: 2%;
+  font-family: 'Calistoga', serif;
+}
+
+.modal-body-nav a{
+  text-decoration: none;
+  color: #FFE2CA;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.modal-body-nav a:hover{
+  color: #FFE2CA;
+}
+
+
+
+
+
+
+
+
+
+
+
 .navb-container{
   padding-right:5% !important;
   padding-left: 5% !important;

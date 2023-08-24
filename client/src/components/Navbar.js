@@ -51,7 +51,7 @@ function Navbar() {
             <motion.div variants={child}>Shakn</motion.div>
           </Link>
           </div>
-          <div class="mobile-toggler d-lg-none">
+          <div class="mobile-toggler ">
             <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
               <i class="fa-solid fa-bars fa-2x bars-icon"></i>
             </a>
@@ -66,19 +66,19 @@ function Navbar() {
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-slideout" role="document">
-              <div class="modal-content">
-                <div class="modal-header d-flex">
-                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <div class="modal-dialog modal-fullscreen modal-dialog-slideout" role="document">
+              <div class="modal-content modal-content-nav px-md-5 px-3">
+                <div class="modal-header modal-header-nav d-flex">
+                  <h5 class="modal-title modal-title-nav" id="exampleModalLabel">Shakn</h5>
                   <button
                     type="button"
-                    class="btn-close"
+                    class=" btn-close btn-close-white"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">
-                  <div class="modal-line">
+                <div class="modal-body modal-body-nav text-center p-5">
+                  <div class="modal-line mt-5">
                     <a href="/">Home</a>
                   </div>
 
@@ -89,9 +89,6 @@ function Navbar() {
                   <div class="modal-line">
                     <a href="/">About</a>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <a type="button" data-bs-dismiss="modal"> Close </a>
                 </div>
               </div>
             </div>

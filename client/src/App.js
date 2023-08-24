@@ -39,7 +39,7 @@ function AppContent() {
         <Navbar />
         {/* <AnimatedNav /> */}
       </div>
-      {/* <Routes>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
       <Route path="/blog" element={<Blog/>} />
@@ -50,7 +50,7 @@ function AppContent() {
       <Route path="/results/:category" element={<Results />} />
       <Route path="/results/nonalcoholic" element={<Results />}/>
       <Route path="/results" element={<Results />} />
-      </Routes> */}
+      </Routes>
 
     </SearchContext.Provider>
   );
