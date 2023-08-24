@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import {Link} from 'react-router-dom';
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 
 
 function Navbar() {
 
-  const [navBarOpen, setNavBarOpen] = useState(false)
+  //desktop animation
 
   const container = {
     hidden: {opacity: 0},
     visible: (i = 1) => ({
       opacity: 1,
-      transition: {staggerChildren: 0.02, delayChildren: navBarOpen ? 0.02 * i : 0.02 * i}
+      transition: {staggerChildren: 0.07, delayChildren: 0.02 * i }
     })
   }
 
@@ -27,17 +27,36 @@ function Navbar() {
     },
     hidden: {
       opacity: 0,
-      y: 0,
+      y: -90,
       transition: {
         type: "spring",
         damping: 12,
         stiffness: 100
       }
+    },
+    exit: {
+      opacity: 0,
+      height: 90,
+      transition: {
+        ease: "easeInOut",
+        delay: 0.4
+      }
     }
   }
   
-  const toggleNavBar = () => {
-    setNavBarOpen(!navBarOpen)
+
+  //modal animation
+
+  const item = {
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.5,
+        delay: 0.9
+      }
+    }
   }
 
 
@@ -57,7 +76,7 @@ function Navbar() {
             </a>
           </div>
 
-        
+          
           <div
             class="modal fade"
             id="navbModal"
@@ -67,7 +86,7 @@ function Navbar() {
             aria-hidden="true"
           >
             <div class="modal-dialog modal-fullscreen modal-dialog-slideout" role="document">
-              <div class="modal-content modal-content-nav px-md-5 px-3">
+              <div class="modal-content modal-content-nav px-md-5 px-3" variants={container} initial="hidden" animate="visible">
                 <div class="modal-header modal-header-nav d-flex">
                   <h5 class="modal-title modal-title-nav" id="exampleModalLabel">Shakn</h5>
                   <button
@@ -77,19 +96,21 @@ function Navbar() {
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body modal-body-nav text-center p-5">
-                  <div class="modal-line mt-5">
+                <AnimatePresence>
+                <motion.div variants={container} initial="hidden" whileInView="visible" class="modal-body modal-body-nav text-center p-5">
+                  <motion.div variants={child} class="modal-line mt-5">
                     <a href="/">Home</a>
-                  </div>
+                  </motion.div>
 
-                  <div class="modal-line">
+                  <motion.div variants={child} class="modal-line">
                     <a href="/">Browse All</a>
-                  </div>
+                  </motion.div>
 
-                  <div class="modal-line">
+                  <motion.div variants={child} class="modal-line">
                     <a href="/">About</a>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </div>
