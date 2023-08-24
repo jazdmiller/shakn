@@ -430,6 +430,16 @@
   .about-row{
     text-align: center;
   }
+
+  .hero-text-mobile{
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-text-mobile-discover{
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 500px){
@@ -456,6 +466,17 @@
 }
 
 @media (min-width: 768px){
+
+  
+  .hero-text-mobile{
+    text-align: left;
+    justify-content: left;
+  }
+
+  .hero-text-mobile-discover{
+    text-align: left;
+    justify-content: left;
+  }
 
   .search-input{
     width: 75%;

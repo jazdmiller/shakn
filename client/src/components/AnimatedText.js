@@ -35,11 +35,11 @@ function AnimatedText({text}) {
         }
     }
   return (
-    <motion.div style={{overflow: "hidden", display: "flex", flexWrap: "wrap"}} variants={container} initial="hidden" animate="visible">
+    <motion.div class="hero-text-mobile" style={{overflow: "hidden", display: "flex", flexWrap: "wrap"}} variants={container} initial="hidden" animate="visible">
          {words.map((word, index) => {
             if (word === "Discover:") {
                 return (
-                    <div key={index} style={{ overflow: "hidden", display: "flex", flexWrap: "wrap", width: '100%', color: "black"}} >
+                    <div key={index} class="hero-text-mobile-discover" style={{ overflow: "hidden", display: "flex", flexWrap: "wrap", width: '100%', color: "black"}} >
                         <motion.span 
                             variants={child} 
                             className="hero-text"
