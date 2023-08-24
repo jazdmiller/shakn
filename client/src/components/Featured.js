@@ -12,7 +12,7 @@ function Featured() {
       opacity: 1,
       transition: {
         staggerChildren: 0.05,
-        delayChildren: .3 * i
+        delayChildren: .02 * i
       }
     })
   }

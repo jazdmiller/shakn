@@ -343,15 +343,23 @@
 
 .recipe-card a{
   background-color: #EA4E45;
+  border: 1px solid #EA4E45;
+  transition: background-color .5;
   color: white;
-  border: none;
 }
 
 .recipe-card a:hover{
   background-color: white;
   color: #EA4E45;
-  border: 1px solid red;
+  border: 1px solid #EA4E45;
 }
+
+.recipe-card a:hover{
+  background-color: white;
+  color: #EA4E45;
+  border: 1px solid #EA4E45;
+}
+
 
 .card-title{
   overflow: hidden;

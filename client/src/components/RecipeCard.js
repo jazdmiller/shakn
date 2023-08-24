@@ -13,7 +13,7 @@ function RecipeCard({title, description, image, link}) {
                   <p class="card-text">
                     {description}
                   </p>
-                  <Link to={`/recipe/${link}`} class="btn btn-primary">
+                  <Link to={`/recipe/${link}`} class="btn">
                     View Recipe
                   </Link>                  
                 </div>
