@@ -12,6 +12,13 @@ function Navbar() {
     visible: (i = 1) => ({
       opacity: 1,
       transition: {staggerChildren: 0.07, delayChildren: 0.02 * i }
+    }),
+    exit: (i = 1) => ({
+      opacity: 0,
+      height: 90,
+      transition: {
+        delayChildren: .2 * i
+      }
     })
   }
 
@@ -64,15 +71,15 @@ function Navbar() {
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark border-2 nav-background">
-        <motion.div variants={container} initial="hidden" animate="visible" class="container-fluid navb-container">
+        <motion.div variants={container} initial="hidden" animate="visible" exit="exit" class="container-fluid navb-container">
             <div className=" border-dark p-2 px-5 nav-logo">
           <Link to="/">
-            <motion.div variants={child}>Shakn</motion.div>
+            <motion.div variants={child} exit="exit">Shakn</motion.div>
           </Link>
           </div>
           <div class="mobile-toggler ">
             <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
-              <i class="fa-solid fa-bars fa-2x bars-icon"></i>
+              <i style={{color: "black"}}class="fa-solid fa-bars fa-2x bars-icon"></i>
             </a>
           </div>
 
@@ -96,9 +103,9 @@ function Navbar() {
                     aria-label="Close"
                   ></button>
                 </div>
-                <AnimatePresence>
                 <motion.div variants={container} initial="hidden" whileInView="visible" class="modal-body modal-body-nav text-center p-5">
-                  <motion.div variants={child} class="modal-line mt-5">
+                <AnimatePresence>
+                  <motion.div variants={child} exit="exit" class="modal-line mt-5">
                     <a href="/">Home</a>
                   </motion.div>
 
@@ -109,8 +116,8 @@ function Navbar() {
                   <motion.div variants={child} class="modal-line">
                     <a href="/">About</a>
                   </motion.div>
-                </motion.div>
                 </AnimatePresence>
+                </motion.div>
               </div>
             </div>
           </div>

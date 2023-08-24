@@ -111,6 +111,7 @@
 }
 
 .modal-body-nav a:hover{
+  opacity: .9;
   color: #FFE2CA;
 }
 
