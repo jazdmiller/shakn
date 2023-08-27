@@ -1,5 +1,5 @@
 # Shakn
-Responsive cocktail recipe finder
+Responsive cocktail recipe finder 
 
 
 ## Description 
