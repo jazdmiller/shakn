@@ -3,16 +3,17 @@ Responsive cocktail recipe finder
 
 
 ## Description 
-Shakn is  a responsive web app built with React that helps users find cocktail recipes based on category or by search functionality. <br>
+Shakn is  a responsive web app built with React that helps users find cocktail recipes based on category or by search functionality.
+Technologies used: JSX, React, HTML, CSS, Bootstrap, Framer Motion <br>
 
 **Key Features:**
 
-- Search for cocktail recipes by name or ingredients
-- Filter and browse cocktails based on various criteria (alcoholic/non-alcoholic, alcohol type)
-- View detailed information about each cocktail recipe, including ingredients and preparation instructions
-- Responsive design for seamless user experience across devices
 - Integrated with TheCocktailDB API for a comprehensive cocktail database
-- Blog display using Strapi
+- Search for cocktail recipes by name or ingredient
+- Filter and browse cocktails based on various criteria (alcoholic/non-alcoholic, spirit type)
+- View detailed information about each cocktail recipe, including ingredients and preparation instructions
+- Responsive design using Bootstrap and Framer Motion for seamless user experience across devices
+
 
 
 ## User Flow
@@ -30,10 +31,10 @@ Shakn is  a responsive web app built with React that helps users find cocktail r
   - Users can browse the cocktail cards displayed in a grid format
 
 4. Cocktail Recipe Detail Page:
-  - Users can click on a cocktail card to view more details, including ingredients, preparation instructions, glass type, and garnish
+  - Users can click on a cocktail card to view more details, including ingredients and preparation instructions
 
 5. Exploere additional information:
-  - Users can learn more about the website through the 'About Us' and 'Contact Us' pages
+  - Users can learn more about the website through the 'About Us' page
 
 
 ## Component Hierarchy
@@ -61,12 +62,5 @@ Shakn is  a responsive web app built with React that helps users find cocktail r
         |   |   |-- IngredientsList
         |   |   |-- PreparationInstructions
         |   |
-        |   |-- BlogPage
-        |   |   |--BlogCard
-        |   |      |-- ArticlePage
         |   |
         |   |-- AboutUsPage
-        |
-        |-- Footer
-            |-- FooterLinks
-            |-- NewsletterSubscription
