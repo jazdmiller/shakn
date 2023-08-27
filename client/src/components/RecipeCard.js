@@ -6,7 +6,7 @@ function RecipeCard({title, description, image, link}) {
   return (
     <div>
           
-        <div style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} class="card recipe-card">
+        <div style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} class="w-100 card recipe-card">
                 <img src={image} class="card-img-top" alt={title} />
                 <div class="card-body">
                   <h5 class="card-title">{title}</h5>
