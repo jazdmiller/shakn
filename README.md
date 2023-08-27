@@ -1,10 +1,9 @@
 # Shakn
-Responsive cocktail recipe finder 
+Responsive cocktail recipe finder built with Reactjs, axios, HTML, CSS, Bootstrap, and Framer Motion.
 
 
 ## Description 
-Shakn is  a responsive web app built with React that helps users find cocktail recipes based on category or by search functionality.
-Technologies used: JSX, React, HTML, CSS, Bootstrap, Framer Motion <br>
+Shakn is  a responsive web app built with React that helps users find cocktail recipes based on category or by search functionality. <br>
 
 https://github.com/jazdmiller/shakn/assets/90724224/2cab6453-ec96-492d-a04f-6ebf918ddf12
 
