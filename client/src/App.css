@@ -212,9 +212,9 @@
 }
 
 @media (min-width: 390px){
-  .hero-text-col{
+  /* .hero-text-col{
     padding-bottom: 20% !important;
-  }
+  } */
 
   .hero-text{
     text-align: center;
