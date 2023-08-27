@@ -25,11 +25,7 @@ https://github.com/jazdmiller/shakn/assets/90724224/2cab6453-ec96-492d-a04f-6ebf
 1. Landing Page:
   - Users arrive on the landing page, which presents the website's logo, tagline, and featured cocktails
   - The main focus is the search bar, encouraging users to search for cocktail recipes
-  
-
-https://github.com/jazdmiller/shakn/assets/90724224/a260441b-e16e-43e2-9400-7c8c7043c6cb
-
-- Call-to-action buttons prompt users to sign up or log in
+  - Call-to-action buttons prompt users to sign up or log in
 
 2. Search for cocktail recipes:
   - Users can search for recipes using the search bar by entering cocktail names or ingredients
