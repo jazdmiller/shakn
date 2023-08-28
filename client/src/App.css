@@ -144,6 +144,8 @@
 
 .hero-text{
   font-family: 'Calistoga', serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 4vw;
   line-height: 1.3em;
   color: #EA4E45;
