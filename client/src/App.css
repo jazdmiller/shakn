@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
 /* *** ANIMATED NAVBAR *********************************************************** */
 
@@ -170,9 +170,7 @@
 }
 
 @media (min-width: 390px){
-  /* .hero-text-col{
-    padding-bottom: 20% !important;
-  } */
+ 
 
   .hero-text{
     text-align: center;
@@ -190,9 +188,7 @@
 }
 
 @media (min-width: 500px){
-  .hero-text-col{
-    /* padding: 2% !important; */
-  }
+ 
 
   .hero-text{
     text-align: center;
