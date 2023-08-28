@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ad97557f.css",
+    "main.js": "/static/js/main.4c189057.js",
+    "static/js/787.285038d3.chunk.js": "/static/js/787.285038d3.chunk.js",
+    "static/media/drink-img-1.jpg": "/static/media/drink-img-1.5ef3f234f72ea06f821f.jpg",
+    "static/media/hero-img.png": "/static/media/hero-img.c81cc6c8a7fb932cca8c.png",
+    "static/media/about-img.png": "/static/media/about-img.36e28de285ba69a9c1d6.png",
+    "index.html": "/index.html",
+    "main.ad97557f.css.map": "/static/css/main.ad97557f.css.map",
+    "main.4c189057.js.map": "/static/js/main.4c189057.js.map",
+    "787.285038d3.chunk.js.map": "/static/js/787.285038d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad97557f.css",
+    "static/js/main.4c189057.js"
+  ]
+}
