@@ -53,6 +53,7 @@ function Featured() {
         }
     }
     setDrinks(fetchedDrinks);
+    console.log("Set drinks:", fetchedDrinks);
 }
 
 fetchDrinks();
