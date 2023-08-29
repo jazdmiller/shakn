@@ -70,9 +70,9 @@ function Navbar() {
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-none py-0 border-bottom border-dark border-2 nav-background">
+      <nav class="navbar navbar-expand-lg bg-none py-2 nav-background">
         <motion.div variants={container} initial="hidden" animate="visible" exit="exit" class="container-fluid navb-container">
-            <div className=" border-dark p-2 px-5 nav-logo">
+            <div className=" border-dark p-2 nav-logo">
           <Link to="/">
             <motion.div variants={child} exit="exit">Shakn</motion.div>
           </Link>

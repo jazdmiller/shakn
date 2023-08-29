@@ -99,7 +99,7 @@
 
 .nav-logo{
  font-family:'Calistoga', serif;
- font-size: 2em;
+ font-size: 2.3em;
 }
 
 .nav-logo a:link {
@@ -348,6 +348,14 @@
 
 .blog-home-label a:hover{
   color: gray;
+}
+
+input.search-input{
+  color: black;
+}
+
+input.search-input:focus{
+  outline-color: #EA4E45;
 }
 
 /* ***************** MEDIA QUERIES *************************** */
