@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'self'; font-src 'self' fonts.gstatic.com; style-src 'self' fonts.googleapis.com

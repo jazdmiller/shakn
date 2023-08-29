@@ -39,7 +39,11 @@ function Featured() {
   }
 
   useEffect(() => {
+
+    const delay = (duration) => new Promise(resolve => setTimeout(resolve, duration));
+
   const getRandomDrink = async () => {
+    await delay(500);
     const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     return response.data.drinks[0]
   }
