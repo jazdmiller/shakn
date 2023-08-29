@@ -1,6 +1,6 @@
 
 import './App.css';
-import {HashRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Search from './pages/Search'
