@@ -39,19 +39,24 @@ function Featured() {
   }
 
   useEffect(() => {
-
-    const delay = (duration) => new Promise(resolve => setTimeout(resolve, duration));
-
+    
   const getRandomDrink = async () => {
-    await delay(500);
     const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     return response.data.drinks[0]
   }
-  Promise.all([getRandomDrink(), getRandomDrink(), getRandomDrink()])
-  .then((drinks) => {
-    setDrinks(drinks)
-  })
-}, [])
+  const fetchDrinks = async () => {
+    const fetchedDrinks = [];
+    while (fetchedDrinks.length < 3) {
+        const drink = await getRandomDrink();
+        if (!fetchedDrinks.some(d => d.idDrink === drink.idDrink)) {
+            fetchedDrinks.push(drink);
+        }
+    }
+    setDrinks(fetchedDrinks);
+}
+
+fetchDrinks();
+}, []);
 
   return (
     <div>
